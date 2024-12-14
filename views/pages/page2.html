@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Cook - Page 2</title>
+    <!--css-->
+    <link rel="stylesheet" href="/public/css/howtocook.css">
+    <!--font chữ web-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <!--icon web-->
+    <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!--thanh search-->
+    <script src="/public/js/search.js"></script> 
+<body>
+    <header>
+        <h1>How to Cook</h1>
+        <nav>
+            <!--Menu-->
+            <ul>
+                <li><a href="/views/pages/page1.html">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a><button class="logout" id="login-logout-btn">Logout</button></a></li>
+            </ul>
+
+        </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
+    </header>
+    <main>
+        <section class="region1">
+            <h2>Chubu</h2>
+            <div class="description">
+              <p style="font-size: 1.2rem;"><strong>Chubu</strong>, located in central Japan, is known for its diverse landscapes and rich culinary traditions. Famous for <strong>Hida beef</strong>, <strong>hitsumabushi</strong> (grilled eel with rice), and <strong>miso katsu</strong>, the region also produces <strong>koshihikari rice</strong> and offers seafood like <strong>shirasu</strong> and <strong>aji</strong> (horse mackerel). The area’s mountainous terrain provides fresh ingredients such as wild mushrooms and wasabi, further enhancing its dishes. Chubu’s food culture combines traditional and modern influences, offering a unique taste of central Japan.</p>
+            </div>
+            <div class="slider">
+                <div class="track">
+                    <div class="item">
+                        <a href="/views/recipes/recipes2/hoto.html">    
+                            <div class="image-container">
+                              <img src="/images/images2/Hoto.jpg" alt="Hoto">
+                            </div>
+                            <div class="text-content">
+                              <p>Hoto</p>
+                              <p class="description">Thick noodles, a Yamanashi specialty, simmered with pumpkin and vegetables in a rich miso broth 🍲</p>
+                            </div>
+                        </a>  
+                    </div>  
+                    <div class="item">
+                        <a href="/views/recipes/recipes2/miso_katsu.html">    
+                            <div class="image-container">
+                              <img src="/images/images2/miso_katsu.jpg" alt="Miso Katsu">
+                            </div>
+                            <div class="text-content">
+                              <p>Miso Katsu</p>
+                              <p class="description">Crispy pork cutlet topped with sweet and savory miso sauce, a Nagoya specialty 🍖</p>
+                            </div>
+                        </a>  
+                    </div>              
+                    <div class="item">
+                        <a href="/views/recipes/recipes2/hitsumabushi.html">    
+                            <div class="image-container">
+                              <img src="/images/images2/Hitsumabushi.jpg" alt="Hitsumabushi">
+                            </div>
+                            <div class="text-content">
+                              <p>Hitsumabushi</p>
+                              <p class="description">Rice paired with grilled eel and condiments, served in Nagoya with unique ways of enjoyment 🐟</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes2/Ebi_Senbei.html">    
+                            <div class="image-container">
+                              <img src="/public/images/images2/Ebi_Senbei.webp" alt="Ebi Senbei">
+                            </div>
+                            <div class="text-content">
+                              <p>Ebi Senbei</p>
+                              <p class="description">Crispy rice crackers infused with the savory taste of dried shrimp 🍤</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/tekone_sushi.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/tekone_sushi.jpg" alt="Tekone Sushi">
+                          </div>
+                          <div class="text-content">
+                            <p>Tekone Sushi</p>
+                            <p class="description">A specialty from Ise, featuring fresh tuna marinated in sauce and served over sushi rice 🍣</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/toyama_black_ramen.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/toyama_black_ramen.jpg" alt="Toyama Black Ramen">
+                          </div>
+                          <div class="text-content">
+                            <p>Toyama Black Ramen</p>
+                            <p class="description">A ramen dish with a jet-black soy sauce broth, offering a bold and salty taste 🍜</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/gohei_mochi.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/gohei_mochi.jpg" alt="Gohei Mochi">
+                          </div>
+                          <div class="text-content">
+                            <p>Gohei Mochi</p>
+                            <p class="description">Skewered rice cakes grilled to perfection and glazed with a sweet miso sauce 🍢</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/noppe_jiru.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/noppe_jiru.jpg" alt="Noppe Jiru">
+                          </div>
+                          <div class="text-content">
+                            <p>Noppe Jiru</p>
+                            <p class="description">A hearty vegetable soup from Niigata, packed with nutrition and delicate flavors 🥕</p>
+                          </div>
+                      </a>  
+                    </div>    
+                </div>
+            </div> 
+          </section>  
+    
+          <section class="region2">
+            <h2>Kansai</h2>
+            <div class="description">
+              <p style="font-size: 1.2rem;"><strong>Kansai</strong>, the heart of Japan, is renowned for its rich culinary traditions, including <strong>osaka-style takoyaki</strong> and <strong>kushikatsu</strong>, alongside <strong>kyo-ryori</strong> (Kyoto cuisine) like <strong>kaiseki</strong> and <strong>yudofu</strong>. The region’s fertile land produces <strong>koshihikari rice</strong> and <strong>kyoto vegetables</strong>, while its coastal waters provide fresh seafood like <strong>fugu</strong> and <strong>tai</strong>. Kansai’s cuisine combines traditional flavors with seasonal ingredients. It is a true reflection of the region’s rich cultural and culinary heritage.</p>
+            </div>
+            <div class="slider">
+                <div class="track">
+                    <div class="item">
+                        <a href="/views/recipes/recipes2/takoyaki.html">    
+                            <div class="image-container">
+                              <img src="/images/images2/takoyaki.jpg" alt="Takoyaki">
+                            </div>
+                            <div class="text-content">
+                              <p>Takoyaki</p>
+                              <p class="description">Crispy and fluffy octopus-stuffed balls, topped with sauce and bonito flakes, an Osaka specialty 🐙</p>
+                            </div>
+                        </a>  
+                    </div>  
+                    <div class="item">
+                        <a href="/views/recipes/recipes2/okonomiyaki.html">    
+                            <div class="image-container">
+                              <img src="/images/images2/okonomiyaki.jpg" alt="okonomiyaki">
+                            </div>
+                            <div class="text-content">
+                              <p>Okonomiyaki</p>
+                              <p class="description">A savory pancake with various toppings, flavored with rich okonomiyaki sauce 🥞</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes2/kitsune_udon.html">    
+                            <div class="image-container">
+                              <img src="/images/images2/kitsune_udon.jpg" alt="Kitsune Udon">
+                            </div>
+                            <div class="text-content">
+                              <p>Kitsune Udon</p>
+                              <p class="description">Udon noodles paired with sweet and savory fried tofu, known for its comforting taste 🦊</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/yudofu.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/yudofu.jpg" alt="Yudofu">
+                          </div>
+                          <div class="text-content">
+                            <p>Yudofu</p>
+                            <p class="description">Soft tofu gently simmered in a light broth, a winter favorite 🍲</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/sabazushi.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/sabazushi.jpg" alt="Sabazushi">
+                          </div>
+                          <div class="text-content">
+                            <p>Sabazushi</p>
+                            <p class="description">Salted mackerel sushi, a traditional Kyoto delicacy with robust flavors 🐟</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/kushikatsu.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/kushikatsu.jpg" alt="Kushikatsu">
+                          </div>
+                          <div class="text-content">
+                            <p>Kushikatsu</p>
+                            <p class="description">Assorted meat and vegetables breaded and deep-fried, a street food staple 🍢</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/hoba_miso.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/hoba_miso.jpg" alt="Hoba Miso">
+                          </div>
+                          <div class="text-content">
+                            <p>Hoba Miso</p>
+                            <p class="description">Miso paste grilled on a magnolia leaf, often paired with rice and vegetables 🍂</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/oden.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/oden.jpg" alt="Oden">
+                          </div>
+                          <div class="text-content">
+                            <p>Oden</p>
+                            <p class="description">A comforting hotpot with ingredients like daikon, fish cakes, and boiled eggs, simmered in dashi 🍢</p>
+                          </div>
+                      </a>  
+                    </div>
+                </div>
+            </div>
+          </section>  
+    
+          <section class="region3">
+            <h2>Chugoko</h2>
+            <div class="description">
+              <p style="font-size: 1.2rem;"><strong>Chugoku</strong>, located in western Japan, is famous for its diverse regional cuisine. Known for its <strong>okayama peaches</strong> and <strong>hiroshima-style okonomiyaki</strong>, the region also offers <strong>famous oysters</strong> and <strong>anago (sea eel)</strong>. The coastal areas are abundant with fresh seafood, while the mountainous regions produce <strong>shochu</strong> and <strong>locally grown rice</strong>. Chugoku's food reflects its rich natural environment and long-standing culinary traditions, offering a unique blend of savory and seasonal flavors.</p>
+            </div>
+            <div class="slider">
+                <div class="track">
+                    <div class="item">
+                        <a href="/views/recipes/recipes2/okonomiyaki_hiroshima.html">    
+                            <div class="image-container">
+                              <img src="/images/images2/okonomiyaki_hiroshima.jpg" alt="Okonomiyaki Hiroshima">
+                            </div>
+                            <div class="text-content">
+                              <p>Okonomiyaki Hiroshima</p>
+                              <p class="description">A layered savory pancake with soba noodles and cabbage, unique to Hiroshima 🥞</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes2/nizakana.html">    
+                            <div class="image-container">
+                              <img src="/images/images2/nizakana.jpg" alt="Nizakana">
+                            </div>
+                            <div class="text-content">
+                              <p>Nizakana</p>
+                              <p class="description">Fresh fish simmered in soy sauce and mirin, achieving a perfectly balanced sweet-savory taste 🐟</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes2/kaki_furai.html">    
+                            <div class="image-container">
+                              <img src="/images/images2/kaki_furai.jpg" alt="Kaki Furai">
+                            </div>
+                            <div class="text-content">
+                              <p>Kaki Furai</p>
+                              <p class="description">Fresh oysters coated in breadcrumbs and fried to golden perfection 🦪</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/matsuba_gani_shabu.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/matsuba_gani_shabu.jpg" alt="Matsuba Gani Shabu">
+                          </div>
+                          <div class="text-content">
+                            <p>Matsuba Gani Shabu</p>
+                            <p class="description">A luxurious winter delicacy featuring snow crab in a light hotpot broth 🦀</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/izumo_soba.html">    
+                          <div class="image-container">
+                            <img src="/public/images/images2/izumo_soba.jpg" alt="Izumo Soba">
+                          </div>
+                          <div class="text-content">
+                            <p>Izumo Soba</p>
+                            <p class="description">Robust buckwheat noodles served cold or with a distinctive dipping sauce 🍜</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/kibinago_no_sunomono.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/kibinago_no_sunomono.jpg" alt="Kibinago No Sunomono">
+                          </div>
+                          <div class="text-content">
+                            <p>Kibinago No Sunomono</p>
+                            <p class="description">A tangy and refreshing salad made with fresh sprats marinated in vinegar 🐟</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/horumon_udon.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/horumon_udon.jpg" alt="Horumon Udon">
+                          </div>
+                          <div class="text-content">
+                            <p>Horumon Udon</p>
+                            <p class="description">Stir-fried udon with rich and flavorful beef or pork offal 🍜</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes2/bara_sushi.html">    
+                          <div class="image-container">
+                            <img src="/images/images2/bara_sushi.jpg" alt="Bara Sushi">
+                          </div>
+                          <div class="text-content">
+                            <p>Bara Sushi</p>
+                            <p class="description">Sushi rice topped with a variety of colorful ingredients, fresh and delightful 🍣</p>
+                          </div>
+                      </a>  
+                    </div>
+                </div>
+            </div>
+            </section>
+            <script src="/public/js/scrolling.js"></script>
+            <div class="pagination">
+              <a href="/views/pages/page1.html" title="Page 1">1</a>
+              <a href="/views/pages/page2.html" title="Page 2" class="active">2</a>
+              <a href="/views/pages/page3.html" title="Page 3">3</a>
+          </div>
+    </main>
+</body>
+</html>

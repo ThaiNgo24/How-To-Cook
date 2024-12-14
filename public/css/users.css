@@ -1,0 +1,133 @@
+/* Đặt toàn bộ trang web sử dụng block layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hachi Maru Pop", cursive;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  height: 100vh; /* Chiều cao toàn màn hình */
+  background-image: url('/public/background/1.webp'); /* Đặt hình ảnh làm nền */
+  background-size: cover; /* Làm nền phủ kín toàn bộ trang */
+  background-position: center; /* Căn giữa hình ảnh nền */
+}
+
+/* Đặt khoảng cách giữa các phần tử */
+.container {
+  display: block;
+  width: 350px; /* Đặt chiều rộng cố định cho container */
+  padding: 30px; /* Khoảng cách bên trong container */
+  background-color: rgba(255, 255, 255, 0.85); /* Nền trắng trong suốt */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Đổ bóng mạnh để nổi bật */
+  border-radius: 10px; /* Bo góc container */
+  text-align: center; /* Căn giữa nội dung trong container */
+  opacity: 0; /* Ẩn container khi bắt đầu */
+  animation: fadeInBox 1.3s forwards; /* Thêm hiệu ứng hiện rõ dần */
+}
+
+/* Hiệu ứng fade-in cho container */
+@keyframes fadeInBox {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Di chuyển container từ dưới lên */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Container sẽ về vị trí ban đầu */
+  }
+}
+
+/* Tiêu đề chính */
+h1 {
+  margin-bottom: 20px; /* Khoảng cách giữa tiêu đề và nội dung phía dưới */
+  color: #333; /* Màu chữ cho tiêu đề */
+  font-weight: 700; /* Chữ đậm */
+  line-height: 1.2; /* Khoảng cách giữa các dòng */
+}
+
+/* Tiêu đề Welcome to, How To Cook, Let's get started by creating your account! */
+.welcome-title {
+  text-align: center;
+}
+
+/* Welcome to (1rem, không in đậm) */
+.welcome-title span:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-weight: normal;
+}
+
+/* How To Cook (1.5rem, in đậm và màu #b22222) */
+.welcome-title span:nth-child(2) {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #b22222;
+  display: block; /* Để xuống dòng */
+}
+
+/* Let's get started by creating your account! (0.5rem, không in đậm) */
+.welcome-title span:last-child {
+  font-size: 0.8rem;
+  font-weight: normal; /* Không in đậm */
+  display: block; /* Để xuống dòng */
+  margin-top: 10px;
+}
+
+/* Tiêu đề "Register" với màu #b22222 */
+h2 {
+  color: #b22222;
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Định dạng nhãn */
+label {
+  display: block;
+  margin-bottom: 5px; /* Khoảng cách giữa nhãn và trường nhập liệu */
+}
+
+/* Định dạng input */
+input {
+  width: 100%; /* Đặt chiều rộng của input bằng chiều rộng của container */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước của input */
+}
+
+/* Định dạng nút đăng ký */
+button {
+  width: 100%; /* Đặt chiều rộng của button bằng chiều rộng của container */
+  padding: 10px;
+  background-color: #b22222; /* Màu nút đăng ký */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em; /* Tăng kích thước chữ của nút */
+}
+
+/* Hiệu ứng hover cho nút */
+button:hover {
+  background-color: #a52a2a; /* Màu khi hover */
+}
+
+/* Thêm margin cho các liên kết */
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Các phần tử khác */
+p {
+  margin-bottom: 20px;
+  color: #666; /* Màu chữ nhạt cho câu phụ */
+  font-size: 1em;
+}

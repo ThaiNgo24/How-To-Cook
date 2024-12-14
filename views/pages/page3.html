@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Cook - Page 3</title>
+    <!--css-->
+    <link rel="stylesheet" href="/public/css/howtocook.css">
+    <!--font chữ web-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <!--icon web-->
+    <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!--thanh search-->
+    <script src="/public/js/search.js"></script> 
+<body>
+    <header>
+        <h1>How to Cook</h1>
+        <nav>
+            <!--Menu-->
+            <ul>
+                <li><a href="/views/pages/page1.html">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a><button class="logout" id="login-logout-btn">Logout</button></a></li>
+            </ul>
+
+        </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
+    </header>
+    <main>
+        <section class="region1">
+            <h2>Shikoku</h2>
+            <div class="description">
+            <p style="font-size: 1.2rem;">
+              <strong>Shikoku</strong>, Japan’s smallest island, is famous for its fresh <strong>tai</strong> (sea bream), <strong>katsuo</strong> (bonito), and <strong>Sanuki Udon</strong>, with chewy noodles and a simple, delicious broth. The region’s <strong>yuzu</strong> and <strong>sudachi</strong> citrus add a zesty touch to many dishes. <strong>Tokushima ramen</strong> offers a savory experience, while <strong>wasanbon</strong>, a delicate local sweet, showcases Shikoku’s rich culinary heritage. Shikoku’s cuisine harmonizes the flavors of the <strong>sea</strong>, <strong>land</strong>, and <strong>tradition</strong>, offering a unique taste of Japan’s cultural diversity.
+            </p>
+            </div>
+            <div class="slider">
+                <div class="track">
+                    <div class="item">
+                        <a href="/views/recipes/recipes3/Katsuo_no_Tataki.html">    
+                            <div class="image-container">
+                              <img src="/images/images3/Katsuo_no_Tataki.jpg" alt="Katsuo no Tataki">
+                            </div>
+                            <div class="text-content">
+                              <p>Katsuo no Tataki</p>
+                              <p class="description">Lightly seared bonito slices served with tangy ponzu and fresh garlic—Shikoku’s iconic dish! 🐟🔥</p>
+                            </div>
+                        </a>  
+                    </div>  
+                    <div class="item">
+                        <a href="/views/recipes/recipes3/Sanuki_Udon.html">    
+                            <div class="image-container">
+                              <img src="/images/images3/Sanuki_Udon.jpg" alt="Sanuki Udon">
+                            </div>
+                            <div class="text-content">
+                              <p>Sanuki Udon</p>
+                              <p class="description">Chewy and thick wheat noodles from Kagawa, served hot or cold with simple toppings 🍜👌</p>
+                            </div>
+                        </a>  
+                    </div>              
+                    <div class="item">
+                        <a href="/views/recipes/recipes3/Tai_Meshi.html">    
+                            <div class="image-container">
+                              <img src="/images/images3/Tai_Meshi.jpg" alt="Tai Meshi">
+                            </div>
+                            <div class="text-content">
+                              <p>Tai Meshi</p>
+                              <p class="description">A fragrant rice dish cooked with tender sea bream—a Shikoku delicacy! 🐟🍚</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes3/Sudachi_Soba.html">    
+                            <div class="image-container">
+                              <img src="/images/images3/Sudachi_Soba.jpg" alt="Sudachi Soba">
+                            </div>
+                            <div class="text-content">
+                              <p>Sudachi Soba</p>
+                              <p class="description">Buckwheat noodles with slices of aromatic sudachi citrus—a refreshing treat! 🍋🍜</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Iya_Soba.html">    
+                          <div class="image-container">
+                            <img src="/images/images3/Iya_Soba.jpg" alt="Iya Soba">
+                          </div>
+                          <div class="text-content">
+                            <p>Iya Soba</p>
+                            <p class="description">Rustic buckwheat noodles from the remote Iya Valley, served with earthy flavors 🌾🍜</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Naruto_Kintoki_Sweet_Potato.html">    
+                          <div class="image-container">
+                            <img src="/images/images3/Naruto_Kintoki_Sweet_Potato.jpg" alt="Naruto Kintoki Sweet Potato">
+                          </div>
+                          <div class="text-content">
+                            <p>Naruto Kintoki Sweet Potato</p>
+                            <p class="description">Sweet and tender Naruto Kintoki sweet potatoes, enjoyed in various forms from snacks to desserts 🍠✨</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Shimanto_Eel.html">    
+                          <div class="image-container">
+                            <img src="/public/images/images3/Shimanto_Eel.png" alt="Shimanto Eel">
+                          </div>
+                          <div class="text-content">
+                            <p>Shimanto Eel</p>
+                            <p class="description">Grilled eel from the pristine Shimanto River, basted in a sweet soy glaze 🐟🔥</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Uwajima_Taimeshi.html">    
+                          <div class="image-container">
+                            <img src="/public/images/images3/Uwajima_Taimeshi.png" alt="Uwajima  Taimeshi">
+                          </div>
+                          <div class="text-content">
+                            <p>Uwajima  Taimeshi</p>
+                            <p class="description">Raw sea bream slices served over rice with soy-based sauce—a unique take on Tai Meshi! 🐟🍚</p>
+                          </div>
+                      </a>  
+                    </div>
+                </div>
+            </div> 
+          </section>  
+    
+          <section class="region2">
+            <h2>Kyushu</h2>
+            <div class="description">
+            <p style="font-size: 1.2rem;">
+              <strong>Kyushu</strong>, Japan’s southernmost island, is known for its bold, flavorful cuisine. Famous for <strong>tonkotsu ramen</strong> with creamy pork bone broth, <strong>Hakata-style yakitori</strong>, and <strong>mentaiko</strong> (spicy cod roe), Kyushu also offers unique produce like <strong>sweet potatoes</strong> and <strong>kabosu</strong> citrus. The island’s volcanic soil and abundant coastlines provide fresh seafood, while its food culture reflects historical trade influences, with dishes like <strong>castella cake</strong> and <strong>toriten</strong> (tempura-style fried chicken). Kyushu’s cuisine celebrates its rich heritage and natural abundance.
+            </p>
+            </div>
+            <div class="slider">
+                <div class="track">
+                    <div class="item">
+                        <a href="/views/recipes/recipes3/Hakata_Ramen.html">    
+                            <div class="image-container">
+                              <img src="/images/images3/Hakata_Ramen.jpg" alt="Hakata Ramen">
+                            </div>
+                            <div class="text-content">
+                              <p>Hakata Ramen</p>
+                              <p class="description">Creamy pork bone broth with thin noodles—a Fukuoka specialty! 🍜✨</p>
+                            </div>
+                        </a>  
+                    </div>  
+                    <div class="item">
+                        <a href="/views/recipes/recipes3/Motsunabe.html">    
+                            <div class="image-container">
+                              <img src="/images/images3/Motsunabe.jpg" alt="Motsunabe">
+                            </div>
+                            <div class="text-content">
+                              <p>Motsunabe</p>
+                              <p class="description">A hearty hot pot with beef or pork offal, garlic, and chives in a rich broth 🍲✨</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes3/Karashi_Mentaiko.html">    
+                            <div class="image-container">
+                              <img src="/images/images3/Karashi_Mentaiko.jpg" alt="Karashi Mentaiko">
+                            </div>
+                            <div class="text-content">
+                              <p>Karashi Mentaiko</p>
+                              <p class="description">Spicy, marinated cod roe that pairs perfectly with rice or sake! 🐟🔥</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Nagasaki_Champon.html">    
+                          <div class="image-container">
+                            <img src="/images/images3/Nagasaki_Champon.jpg" alt="Nagasaki Champon">
+                          </div>
+                          <div class="text-content">
+                            <p>Nagasaki Champon</p>
+                            <p class="description">A hearty noodle dish with pork, seafood, and vegetables in a creamy broth 🍜🐟</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Tonkatsu.html">    
+                          <div class="image-container">
+                            <img src="/images/images3/Tonkatsu.jpg" alt="Tonkatsu">
+                          </div>
+                          <div class="text-content">
+                            <p>Tonkatsu</p>
+                            <p class="description">Crispy, breaded pork cutlet served with tangy sauce—a Kyushu favorite! 🥩✨</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Chicken_Nanban.html">    
+                          <div class="image-container">
+                            <img src="/images/images3/Chicken_Nanban.jpg" alt="Chicken Nanban">
+                          </div>
+                          <div class="text-content">
+                            <p>Chicken Nanban</p>
+                            <p class="description">Crispy fried chicken topped with sweet vinegar and tartar sauce—a Miyazaki specialty! 🐓🍋</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Saga_Beef.html">    
+                          <div class="image-container">
+                            <img src="/public/images/images3/Saga_Beef.jpeg" alt="Saga Beef">
+                          </div>
+                          <div class="text-content">
+                            <p>Saga Beef</p>
+                            <p class="description">Premium marbled beef from Saga, enjoyed grilled, seared, or as steak 🥩🔥</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Basashi.html">    
+                          <div class="image-container">
+                            <img src="/images/images3/Basashi.jpg" alt="Basashi">
+                          </div>
+                          <div class="text-content">
+                            <p>Basashi</p>
+                            <p class="description">Thinly sliced raw horse meat, served sashimi-style with soy sauce and ginger 🐴🍶</p>
+                          </div>
+                      </a>  
+                    </div>
+                </div>
+            </div>
+          </section>  
+    
+          <section class="region3">
+            <h2>Okinawa</h2>
+            <div class="description">
+            <p style="font-size: 1.2rem;">
+              <strong>Okinawa</strong>, Japan’s tropical paradise, boasts a unique culinary tradition shaped by its subtropical climate and Ryukyu heritage. Known for longevity, it features ingredients like <strong>goya</strong> (bitter melon), <strong>purple sweet potatoes</strong>, and <strong>mozuku seaweed</strong>. Popular dishes include <strong>Rafute</strong> (braised pork belly) and <strong>Okinawa Soba</strong> (noodles with pork and fish cake). Surrounded by clear waters, Okinawa offers fresh seafood like tuna, squid, and clams. Its vibrant food culture blends influences from Chinese, Southeast Asian, and American cuisines, with treats like <strong>taco rice</strong> and <strong>sata andagi</strong> (deep-fried donuts).
+            </p>
+            </div>
+            <div class="slider">
+                <div class="track">
+                    <div class="item">
+                        <a href="/views/recipes/recipes3/Goya_Champuru.html">    
+                            <div class="image-container">
+                              <img src="/images/images3/Goya_Champuru.jpg" alt="Goya Champuru">
+                            </div>
+                            <div class="text-content">
+                              <p>Goya Champuru</p>
+                              <p class="description">Bitter melon stir-fry with tofu, pork, and egg—Okinawa’s iconic comfort food! 🥒🍳</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes3/Okinawa_Soba.html">    
+                            <div class="image-container">
+                              <img src="/images/images3/Okinawa_Soba.jpg" alt="Okinawa Soba">
+                            </div>
+                            <div class="text-content">
+                              <p>Okinawa Soba</p>
+                              <p class="description">Thick, chewy noodles in a light pork and bonito broth—a true Okinawan classic! 🍜✨</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes3/Rafute.html">    
+                            <div class="image-container">
+                              <img src="/images/images3/Rafute.jpg" alt="Rafute">
+                            </div>
+                            <div class="text-content">
+                              <p>Rafute</p>
+                              <p class="description">Slow-simmered pork belly in soy sauce and awamori—melts in your mouth! 🥩🍶</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Taco_Rice.html">    
+                          <div class="image-container">
+                            <img src="/images/images3/Taco_Rice.jpg" alt="Taco Rice">
+                          </div>
+                          <div class="text-content">
+                            <p>Taco Rice</p>
+                            <p class="description"> A fusion of Tex-Mex and Japanese flavors with seasoned beef over rice 🌮🍚</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Sata_Andagi.html">    
+                          <div class="image-container">
+                            <img src="/images/images3/Sata_Andagi.jpg" alt="Sata Andagi">
+                          </div>
+                          <div class="text-content">
+                            <p>Sata Andagi</p>
+                            <p class="description">Sweet and crispy Okinawan doughnuts—a perfect treat! 🍩✨</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Umibudo.html">    
+                          <div class="image-container">
+                            <img src="/images/images3/Umibudo.jpg" alt="Umibudo">
+                          </div>
+                          <div class="text-content">
+                            <p>Umibudo</p>
+                            <p class="description">Fresh, briny seaweed “grapes” bursting with ocean flavor! 🌊🍇</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Shima_Tofu.html">    
+                          <div class="image-container">
+                            <img src="/images/images3/Shima_Tofu.jpg" alt="Shima Tofu">
+                          </div>
+                          <div class="text-content">
+                            <p>Shima Tofu</p>
+                            <p class="description">Firm, rich tofu with a distinctive Okinawan twist 🥢✨</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes3/Mimiga.html">    
+                          <div class="image-container">
+                            <img src="/images/images3/Mimiga.jpg" alt="Mimiga">
+                          </div>
+                          <div class="text-content">
+                            <p>Mimiga</p>
+                            <p class="description">Thinly sliced pig’s ear served with vinegar or miso sauce—a chewy delight! 🐖✨</p>
+                          </div>
+                      </a>  
+                    </div>
+                </div>
+            </div>
+            </section>
+            <script src="/public/js/scrolling.js"></script>
+            <div class="pagination">
+              <a href="/views/pages/page1.html" title="Page 1">1</a>
+              <a href="/views/pages/page2.html" title="Page 2">2</a>
+              <a href="/views/pages/page3.html" title="Page 3" class="active">3</a>
+          </div>
+    </main>
+</body>
+</html>

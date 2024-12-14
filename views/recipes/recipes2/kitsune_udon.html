@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Cook - Kitsune Udon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/howtocook.css">
+    <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
+</head>
+<body>
+    <header>
+        <h1>Kitsune Udon</h1>
+        <nav>
+            <ul>
+                <li><a href="/views/pages/page1.html">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a><button class="logout" id="login-logout-btn">Logout</button></a></li>
+            </ul>
+        </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/images/images2/kitsune_udon.jpg" alt="Kitsune Udon" class="main-image">
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>Origin: Osaka and Kyoto.<br>
+                Flavor: Soft udon in a light dashi broth with sweet, savory fried tofu.<br>
+                Cultural Significance: Associated with fox legends in Japan, as foxes are thought to love tofu.</p>
+            </div>
+            </div>
+        </section>
+        
+        <section id="recipe-details">
+            <h2>Ingredients</h2>
+            <ul>
+                <li>2 frozen Udon noodles *I used TableMark (Katokichi), any brand is OK</li>
+                <li>2 Aburaage (deep-fried Tofu pouch)</li>
+                <li>100ml Dashi broth (using packaged dashi powder saves time)</li>
+                <li>1 tbsp. Mirin (sweet Sake)</li>
+                <li>1 tbsp. sugar</li>
+                <li>1 tbsp. soy sauce</li>
+                <li>Kaketsuyu (Udon soup):</li>
+                <li>500ml Dashi broth (using packaged dashi powder saves time)</li>
+                <li>2 tbsp. Mirin (sweet Sake)</li>
+                <li>1 tsp. soy sauce</li>
+                <li>1/2 tsp. salt</li>
+                <li>chopped green onions</li>
+                <li>Shichimi-togarashi (seven flavor chili pepper) if you like</li>
+            </ul>
+
+            <h2>Instructions</h2>
+            <ol>
+            <li>Cook the udon noodles according to package instructions. Set aside.</li>
+            <li>Prepare the aburaage by simmering it in a mixture of dashi, mirin, sugar, and soy sauce.</li>
+            <li>Make the udon soup by combining dashi, mirin, soy sauce, and salt. Heat until warm.</li>
+            <li>Serve the cooked noodles in a bowl, pour the hot soup over them, and top with prepared aburaage.</li>
+            <li>Garnish with chopped green onions and shichimi-togarashi if desired.</li>
+            </ol>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7Tjk-DHwqpM?si=R0PxpWLfguMQNCCX&amp;start=1" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
+            
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
+        </section>
+    </main>
+</body>
+</html>

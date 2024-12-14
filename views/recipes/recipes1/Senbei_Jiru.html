@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Cook - Senbei Jiru</title> <!-- Thay thế [Dish Name] với tên món ăn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/howtocook.css">
+    <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
+</head>
+<body>
+    <header>
+        <h1>Senbei Jiru</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
+        <nav>
+            <ul>
+                <li><a href="/views/pages/page1.html">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a><button class="logout" id="login-logout-btn">Logout</button></a></li>
+            </ul>
+        </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images1/Senbei_Jiru.webp" alt="Senbei Jiru" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: Senbei Jiru comes from <strong>Hachinohe, Aomori Prefecture</strong>, where <strong>rice crackers (senbei)</strong> are used in soup.<br>
+                    <strong>Flavor</strong>: The <strong>soy sauce-based broth</strong>, with <strong>chicken</strong>, <strong>mushrooms</strong>, and <strong>vegetables</strong>, is enriched by the <strong>chewy texture</strong> of softened rice crackers.<br>
+                    <strong>Cultural Significance</strong>: Aomori’s <strong>comfort food</strong>, showcasing the region’s <strong>resourcefulness</strong> in turning simple ingredients into a hearty meal.
+                </p> <!-- Thay thế nội dung thông tin món ăn -->
+            </div>
+            </div>
+        </section>
+        
+        <section id="recipe-details">
+            <h2>Ingredients</h2>
+            <ul>
+                <!-- Thêm hoặc thay thế nguyên liệu ở đây -->
+                <li>6-8 pieces rice crackers (senbei)</li>
+                <li>150g chicken thigh or pork, sliced</li>
+                <li>1/2 carrot, sliced</li>
+                <li>1/2 daikon radish, sliced</li>
+                <li>1/2 onion, sliced</li>
+                <li>3 shiitake mushrooms, sliced</li>
+                <li>4 cups dashi broth</li>
+                <li>2 Tbsp soy sauce</li>
+                <li>1 Tbsp sake</li>
+                <li>1/2 tsp salt</li> <!-- Ví dụ: 2 Aburaage -->
+                <!-- Tiếp tục thêm các nguyên liệu khác -->
+            </ul>
+
+            <h2>Instructions</h2>
+            <ol>
+                <!-- Thêm hoặc thay thế các bước hướng dẫn ở đây -->
+                <li>Pan-Seared Chicken with Veggies: Season chicken with olive oil, salt, pepper, spices. Sear in skillet until golden. Add sliced veggies, season with garlic and herbs. Serve together.</li>
+                <li>Cheesy Stuffed Bread: Flatten dough, stuff with cheese, seal. Bake or fry until golden. Brush with butter, sprinkle herbs.</li>
+                <li>Quick Chocolate Dessert: Mix melted chocolate, crushed biscuits, condensed milk. Shape, chill until firm. Dust with cocoa or drizzle syrup.</li> <!-- Ví dụ: Prepare the aburaage. -->
+                <!-- Tiếp tục thêm các bước hướng dẫn khác -->
+            </ol>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WepeySraI9g?si=3eHFFjPRho2NaVsT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
+            
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
+        </section>
+    </main>
+</body>
+</html>

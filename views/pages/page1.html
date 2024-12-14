@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Cook - Page 1</title>
+    <!--css-->
+    <link rel="stylesheet" href="/public/css/howtocook.css">
+    <!--font chữ web-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <!--icon web-->
+    <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!--thanh search-->
+    <script src="/public/js/search.js"></script> 
+<body>
+    <header>
+        <h1>How to Cook</h1>
+        <nav>
+            <!--Menu-->
+            <ul>
+                <li><a href="/views/pages/page1.html">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a><button class="logout" id="login-logout-btn">Logout</button></a></li>
+            </ul>
+
+        </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
+    </header>
+    <main>
+        <section class="region1">
+            <h2>Hokkaido</h2>
+            <div class="description">
+            <p style="font-size: 1.2rem;"><strong>Hokkaido</strong>, the northernmost island of Japan, is a culinary paradise renowned for its fresh and diverse flavors. From the icy waters of the Sea of Japan come exquisite <strong>seafood</strong>, including <strong>sweet crabs</strong>, delicate <strong>scallops</strong>, and rich <strong>salmon</strong>. The region is also famous for its hearty dishes like <strong>Ishikari Nabe</strong>, a comforting hot pot brimming with tender fish, vegetables, and miso broth. In addition, Hokkaido’s <strong>dairy products</strong>, especially its <strong>creamy milk and cheese</strong>, are world-class. Whether you’re savoring a steaming bowl of <strong>soup curry</strong> or enjoying a slice of <strong>Hokkaido milk bread</strong>, every bite offers a taste of the island’s natural beauty and rich culinary heritage.
+            </p>
+            </div>
+            <div class="slider">
+                <div class="track">
+                    <div class="item">
+                        <a href="/views/recipes/recipes1/ishikari_nabe.html">    
+                            <div class="image-container">
+                              <img src="/images/images1/Ishikari_Nabe.jpg" alt="Ishikari Nabe">
+                            </div>
+                            <div class="text-content">
+                              <p>Ishikari Nabe</p>
+                              <p class="description">A hearty Japanese hot pot with salmon, vegetables, and miso broth, perfect for warming up 🍲</p>
+                            </div>
+                        </a>  
+                    </div>  
+                    <div class="item">
+                        <a href="/views/recipes/recipes1/jingisukan.html">    
+                            <div class="image-container">
+                              <img src="/images/images1/jingisukan.jpg" alt="Jingisukan">
+                            </div>
+                            <div class="text-content">
+                              <p>Jingisukan</p>
+                              <p class="description">A savory grilled lamb dish, marinated in a rich sauce for a smoky, tender flavor 🍖</p>
+                            </div>
+                        </a>  
+                    </div>              
+                    <div class="item">
+                        <a href="/views/recipes/recipes1/chan_chan_yaki.html">    
+                            <div class="image-container">
+                              <img src="/images/images1/chanchanyaki.jpg" alt="Chan Chan Yaki">
+                            </div>
+                            <div class="text-content">
+                              <p>Chan Chan Yaki</p>
+                              <p class="description">Grilled salmon and veggies in a savory soy sauce, bursting with flavor 🍣</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes1/imo_mochi.html">    
+                            <div class="image-container">
+                              <img src="/images/images1/imomochi.jpg" alt="Imo Mochi">
+                            </div>
+                            <div class="text-content">
+                              <p>Imo Mochi</p>
+                              <p class="description">Chewy and savory potato cakes with a hint of sweetness, perfect for a comforting snack 🥔</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/soup_curry.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/soup_curry.jpg" alt="Soup Curry">
+                          </div>
+                          <div class="text-content">
+                            <p>Soup Curry</p>
+                            <p class="description">A rich, spicy broth with tender vegetables and succulent meats, perfect for a cozy meal 🍲</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/zangi.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/zangi.jpg" alt="Zangi">
+                          </div>
+                          <div class="text-content">
+                            <p>Zangi</p>
+                            <p class="description">Crispy, juicy Japanese fried chicken with a savory, flavorful marinade 🍗</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/hokkaido_milk_bread.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/Hokkaido_Milk_Bread.jpg" alt="Hokkaido Milk Bread">
+                          </div>
+                          <div class="text-content">
+                            <p>Hokkaido Milk Bread</p>
+                            <p class="description">Soft, fluffy, and delightfully sweet, with a rich, milky flavor that melts in your mouth 🍞</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/kani_meshi.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/kani_meshi.jpg" alt="Kani Meshi">
+                          </div>
+                          <div class="text-content">
+                            <p>Kani Meshi</p>
+                            <p class="description">Fragrant rice cooked with succulent crab meat, offering a taste of the sea in every bite 🦀</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/hokkaido_cream_stew.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/hokkaido_cream_stew.jpg" alt="Hokkai Cream Stew">
+                          </div>
+                          <div class="text-content">
+                            <p>Hokkaido Cream Stew</p>
+                            <p class="description">A rich, creamy dish with tender chicken, vegetables, and a velvety white sauce 🍲</p>
+                          </div>
+                      </a>  
+                    </div>
+    
+                </div>
+            </div> 
+          </section>  
+    
+          <section class="region2">
+            <h2>Tohoku</h2>
+            <div class="description" >
+            <p style="font-size: 1.2rem;">
+              <strong>Tohoku</strong>, the northeastern region of Japan, is a hidden gem celebrated for its rustic charm and soulful cuisine. Nestled between mountains and coastlines, this area offers a bounty of seasonal delights. From the Pacific Ocean come delicacies like fresh <strong>oysters</strong>, meaty <strong>tuna</strong>, and succulent <strong>sea urchin</strong>, while its fertile lands produce some of Japan’s finest <strong>rice</strong>, used to craft premium <strong>sake</strong>. Tohoku is also renowned for its hearty regional dishes, such as <strong>Kiritanpo</strong>, grilled rice sticks served in a flavorful hot pot with chicken and vegetables, and <strong>Wanko Soba</strong>, a fun and fast-paced way to enjoy endless servings of soba noodles. Pair these with the region’s <strong>crisp apples</strong> and <strong>juicy cherries</strong>, and you’ll experience the heart and soul of Tohoku in every bite.
+            </p>
+            </div>
+            <div class="slider">
+                <div class="track">
+                    <div class="item">
+                        <a href="/views/recipes/recipes1/kiritanpo_nabe.html">    
+                            <div class="image-container">
+                              <img src="/images/images1/Kiritanpo_Nabe.jpg" alt="Kiritanpo Nabe">
+                            </div>
+                            <div class="text-content">
+                              <p>Kiritanpo Nabe</p>
+                              <p class="description">A cozy hot pot with grilled rice sticks, chicken, and veggies in a savory soy-based broth 🍢</p>
+                            </div>
+                        </a>  
+                    </div>  
+                    <div class="item">
+                        <a href="/views/recipes/recipes1/gyutan_yaki.html">    
+                            <div class="image-container">
+                              <img src="/images/images1/Gyutan_Yaki.jpg" alt="Gyutan Yaki">
+                            </div>
+                            <div class="text-content">
+                              <p>Gyutan Yaki</p>
+                              <p class="description">Smoky, tender grilled beef tongue seasoned simply with salt or soy sauce—Sendai’s signature dish! 🥩</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes1/hittsumi_jiru.html">    
+                            <div class="image-container">
+                              <img src="/images/images1/Hittsumi_Jiru.jpg" alt="Hittsumi Jiru">
+                            </div>
+                            <div class="text-content">
+                              <p>Hittsumi Jiru</p>
+                              <p class="description">Rustic soup with hand-torn dough, chicken, and veggies in a savory broth—pure comfort! 🍲</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/Ichigo_ni.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/Ichigo_ni.jpg" alt="Ichigo-ni">
+                          </div>
+                          <div class="text-content">
+                            <p>Ichigo-ni</p>
+                            <p class="description">A delicate seafood stew with sea urchins and abalone floating like strawberries in broth! 🦐</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/Wanko_Soba.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/Wanko_Soba.jpg" alt="Wanko Soba">
+                          </div>
+                          <div class="text-content">
+                            <p>Wanko Soba</p>
+                            <p class="description">Mini soba bowls served endlessly—eat as many as you can in this fun Tohoku tradition! 🍜</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/Senbei_Jiru.html">    
+                          <div class="image-container">
+                            <img src="/public/images/images1/Senbei_Jiru.webp" alt="Senbei Jiru">
+                          </div>
+                          <div class="text-content">
+                            <p>Senbei Jiru</p>
+                            <p class="description">A savory soup with softened rice crackers, chicken, and veggies—a hearty regional favorite! 🥣</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/Harako_Meshi.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/Harako_Meshi.jpg" alt="Harako Meshi">
+                          </div>
+                          <div class="text-content">
+                            <p>Harako Meshi</p>
+                            <p class="description">A flavorful rice bowl topped with salmon and glistening salmon roe—simple and delicious! 🐟</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/Shiso_Maki.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/Shiso_Maki.jpg" alt="Shiso Maki">
+                          </div>
+                          <div class="text-content">
+                            <p>Shiso Maki</p>
+                            <p class="description">Sweet miso paste wrapped in shiso leaves and grilled—an aromatic and tasty treat! 🌿</p>
+                          </div>
+                      </a>  
+                    </div>
+                </div>
+            </div>
+          </section>  
+    
+          <section class="region3">
+            <h2>Kanto</h2>
+            <div class="description">
+            <p style="font-size: 1.2rem;">
+              <strong>Kanto</strong>, the bustling heart of Japan, is a culinary hub where tradition and innovation blend seamlessly. Home to <strong>Tokyo</strong>, the nation’s capital, this region offers an incredible diversity of flavors, from refined <strong>Edo-style sushi</strong>, featuring impeccably fresh seafood, to hearty bowls of <strong>ramen</strong> that warm the soul. Kanto is also known for dishes like <strong>Monjayaki</strong>, a savory pancake filled with an array of ingredients, and <strong>Sukiyaki</strong>, a luscious hot pot of thinly sliced beef, vegetables, and sweet soy-based broth. Its fertile plains produce <strong>crisp vegetables</strong>, while its waters provide treasures like <strong>clams</strong> and <strong>seaweed</strong>. Whether dining at a Michelin-starred restaurant or enjoying street food in <strong>Asakusa</strong>, Kanto’s vibrant culinary scene offers something for every palate.
+            </p>
+            </div>
+            <div class="slider">
+                <div class="track">
+                    <div class="item">
+                        <a href="/views/recipes/recipes1/Sukiyaki.html">    
+                            <div class="image-container">
+                              <img src="/images/images1/Sukiyaki.jpg" alt="Sukiyaki">
+                            </div>
+                            <div class="text-content">
+                              <p>Sukiyaki</p>
+                              <p class="description">Thinly sliced beef simmered in a sweet-savory broth with veggies and tofu—a classic Japanese comfort dish! 🍲</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes1/monjayaki.html">    
+                            <div class="image-container">
+                              <img src="/images/images1/Monjayaki.jpg" alt="Monjayaki">
+                            </div>
+                            <div class="text-content">
+                              <p>Monjayaki</p>
+                              <p class="description">A savory pancake-like dish from Tokyo, cooked directly on a griddle with a gooey texture 🍳</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                        <a href="/views/recipes/recipes1/Chanko_Nabe.html">    
+                            <div class="image-container">
+                              <img src="/images/images1/Chanko_Nabe.jpg" alt="Chanko Nabe">
+                            </div>
+                            <div class="text-content">
+                              <p>Chanko Nabe</p>
+                              <p class="description">A hearty sumo wrestler’s hot pot packed with proteins and veggies to fuel champions 💪🍲</p>
+                            </div>
+                        </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/Hiyashi_Chuka.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/Hiyashi_Chuka.jpg" alt="Hiyashi Chuka ">
+                          </div>
+                          <div class="text-content">
+                            <p>Hiyashi Chuka </p>
+                            <p class="description">A refreshing summer noodle dish served cold with vibrant toppings like cucumber and ham ❄️🍜</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/Fukagawa_Meshi.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/Fukagawa_Meshi.jpg" alt="Fukagawa Meshi">
+                          </div>
+                          <div class="text-content">
+                            <p>Fukagawa Meshi</p>
+                            <p class="description">A savory rice dish cooked with clams in miso broth—a taste of Edo’s coastal history! 🐚🍚</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/Namero.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/Namero.jpg" alt="Namero">
+                          </div>
+                          <div class="text-content">
+                            <p>Namero</p>
+                            <p class="description">A flavorful sashimi tartare of minced fish seasoned with miso and herbs 🐟🌿</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/Anko_Nabe.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/Anko_Nabe.jpeg" alt="Anko Nabe">
+                          </div>
+                          <div class="text-content">
+                            <p>Anko Nabe</p>
+                            <p class="description">A luxurious hot pot featuring monkfish and veggies in a rich miso broth 🐠🍲</p>
+                          </div>
+                      </a>  
+                    </div>
+                    <div class="item">
+                      <a href="/views/recipes/recipes1/Kashira_Yaki.html">    
+                          <div class="image-container">
+                            <img src="/images/images1/Kashira_Yaki.jpg" alt="Kashira Yaki">
+                          </div>
+                          <div class="text-content">
+                            <p>Kashira Yaki</p>
+                            <p class="description">Grilled pork cheek skewers seasoned with a savory glaze—a juicy street food treat! 🍢🐷</p>
+                          </div>
+                      </a>  
+                    </div>
+                </div>
+            </div>
+            </section>
+            <script src="/public/js/scrolling.js"></script>
+            <div class="pagination">
+              <a href="/views/pages/page1.html" title="Page 1" class="active">1</a>
+              <a href="/views/pages/page2.html" title="Page 2">2</a>
+              <a href="/views/pages/page3.html" title="Page 3">3</a>
+            </div>
+    </main>
+</body>
+</html>
