@@ -3,39 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Cook - Zangi</title>
+    <title>How To Cook - Noppe Jiru</title> <!-- Thay thế [Dish Name] với tên món ăn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/howtocook.css">
     <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
 </head>
 <body>
-   
-    <div id="recipe-content"></div>
     <header>
-        <h1>Zingi</h1>
+        <h1>Noppe Jiru</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
         <nav>
+            <!--Menu-->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="menu">
+                  <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                  <ul class="submenu">
+                      <li><a href="/views/pages/page1.html">Home</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/credits">Credits</a></li>
+                      <li><a href="/views/pages/profile.html">Profile</a></li>
+                      <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                  </ul>
+              </li>
             </ul>
+        <script src="/public/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
     </header>
     <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images2/noppe_jiru.jpg" alt="Noppe Jiru" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: A traditional dish from Niigata Prefecture, often enjoyed in the winter months.<br>
+                    <strong>Flavor</strong>: A hearty soup made with vegetables, tofu, and miso, offering a comforting, savory taste.<br>
+                    <strong>Cultural Significance</strong>: Noppe Jiru represents the region's agricultural heritage and is commonly served during New Year's celebrations.
+                </p>
+            </div>
+            </div>
+        </section>
+        
         <section id="recipe-details">
-            <h2>Ingredients</h2></a>
+            <h2>Ingredients</h2>
             <ul>
-                <li>200g bột trắng</li>
-                <li>...</li>
-            </ul>
+                <li>Walnut Miso Paste:</li>
+                <ul>
+                  <li>1 tbsp Miso</li>
+                  <li>1 1/2 tbsp Raw Sugar</li>
+                  <li>1 tbsp Mirin or Sake</li>
+                  <li>20g Roasted Walnuts (0.7 oz)</li>
+                  <li>1/2 tbsp Toasted White Sesame Seeds</li>
+                </ul>
+                <li>Toppings:</li>
+                <ul>
+                  <li>Toasted White Sesame Seeds</li>
+                  <li>Sansho Pepper or Shichimi Chili Powder - optional</li>
+                </ul>
+                <li>5 Wooden Popsicle Sticks</li>
+                <li>Aluminum Foil</li>
+                <li>Vegetable Oil</li>
+              </ul>
 
             <h2>Instructions</h2>
-            <p>1. cách chế biến</p>
+            <ol>
+                <li>Soak dried shiitake mushrooms in water until soft, then slice.</li> 
+                <li>Peel and cut taro, carrot, and cabbage into bite-sized pieces.</li> 
+                <li>Slice konjac and chicken thigh into small pieces.</li> 
+                <li>Blanch snow peas, then cut them diagonally in half.</li>
+                <li>In a pot, bring 500g water and dashi stock to a boil.</li> 
+                <li>Add chicken, taro, carrot, konjac, cabbage, and mushrooms. Simmer until tender.</li>
+                <li>Stir in sake, mirin, soy sauce, and salt. Simmer for 5 minutes.</li>
+                <li>Dissolve potato starch in a small amount of water and gradually add to the soup while stirring.</li>
+            </ol>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PHuxPEUWCcw?si=e6AwkAA5GbloevTO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
             
-            <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MxRcCfgrTkc?si=oTEhD78pWB7j0UFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
         </section>
     </main>
 </body>

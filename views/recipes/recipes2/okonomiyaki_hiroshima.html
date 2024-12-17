@@ -3,39 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Cook - Zangi</title>
+    <title>How To Cook - Okonomiyaki Hiroshima</title> <!-- Thay thế [Dish Name] với tên món ăn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/howtocook.css">
     <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
 </head>
 <body>
-   
-    <div id="recipe-content"></div>
     <header>
-        <h1>Zingi</h1>
+        <h1>Okonomiyaki Hiroshima</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
         <nav>
+            <!--Menu-->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="menu">
+                  <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                  <ul class="submenu">
+                      <li><a href="/views/pages/page1.html">Home</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/credits">Credits</a></li>
+                      <li><a href="/views/pages/profile.html">Profile</a></li>
+                      <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                  </ul>
+              </li>
             </ul>
+        <script src="/public/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
     </header>
     <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images2/Okonomiyaki Hiroshima.jpg" alt="Okonomiyaki Hiroshima" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: Okonomiyaki Hiroshima comes from Hiroshima, Japan, and is a regional variation of the classic okonomiyaki dish, famous for its unique layering technique.<br>
+                    <strong>Flavor</strong>: The dish has a savory, umami-packed flavor with layers of crispy noodles, tender pork, fresh cabbage, and a sweet-savory okonomiyaki sauce.<br>
+                    <strong>Cultural Significance</strong>: This version of okonomiyaki is a beloved local specialty in Hiroshima, often served as a hearty meal at casual dining spots and food stalls.
+                </p>
+            </div>
+            </div>
+        </section>
+        
         <section id="recipe-details">
-            <h2>Ingredients</h2></a>
+            <h2>Ingredients</h2>
             <ul>
-                <li>200g bột trắng</li>
-                <li>...</li>
+                <li>Flour: 1 cup (for the batter)</li>
+                <li>Eggs: 2</li>
+                <li>Water: 3/4 cup (for the batter)</li>
+                <li>Shredded cabbage: 2 cups</li>
+                <li>Cooked yakisoba noodles: 2 servings</li>
+                <li>Pork belly slices: 4-6 slices</li>
+                <li>Okonomiyaki sauce: 3-4 tablespoons (or substitute with Worcestershire sauce)</li>
+                <li>Mayonnaise: 2 tablespoons (optional, for topping)</li>
+                <li>Green onions: Chopped, for garnish</li>
+                <li>Dried bonito flakes: For garnish</li>
+                <li>Seaweed flakes (aonori): For garnish (optional)</li>
+                <li>Oil: For cooking</li>
             </ul>
+            
 
             <h2>Instructions</h2>
-            <p>1. cách chế biến</p>
+            <ol>
+                <li>Mix flour, water, and eggs in a bowl to create a batter. Set aside.</li>
+                <li>Heat a griddle or large pan and lightly oil the surface.</li>
+                <li>Pour half of the batter onto the griddle and spread it into a thin circle, similar to a pancake.</li>
+                <li>Layer the shredded cabbage on top of the batter, followed by a few slices of pork belly and a portion of yakisoba noodles.</li>
+                <li>Pour the remaining batter over the cabbage and noodles, pressing gently to form a thick pancake.</li>
+                <li>Cook the okonomiyaki for about 5-7 minutes on each side, flipping carefully to ensure both sides are golden and crispy.</li>
+                <li>Once cooked, drizzle okonomiyaki sauce on top, and garnish with mayonnaise, green onions, bonito flakes, and aonori if desired.</li>
+                <li>Serve hot and enjoy this layered, savory pancake!</li>
+            </ol>
             
-            <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MxRcCfgrTkc?si=oTEhD78pWB7j0UFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_jwCs4EMZVY?si=U7EIUj4Byv2wO4XH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
+            
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
         </section>
     </main>
 </body>

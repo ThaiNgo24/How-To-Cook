@@ -3,39 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Cook - Chan Chan Yaki</title>
+    <title>How To Cook - Chan Chan Yaki</title> <!-- Thay thế [Dish Name] với tên món ăn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/howtocook.css">
     <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
 </head>
 <body>
-   
-    <div id="recipe-content"></div>
     <header>
-        <h1>Chan Chan Yaki</h1>
+        <h1>Chan Chan Yaki</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
         <nav>
+            <!--Menu-->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="menu">
+                  <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                  <ul class="submenu">
+                      <li><a href="/views/pages/page1.html">Home</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/credits">Credits</a></li>
+                      <li><a href="/views/pages/profile.html">Profile</a></li>
+                      <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                  </ul>
+              </li>
             </ul>
+        <script src="/public/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
     </header>
     <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images1/chanchanyaki.jpg" alt="Chan Chan Yaki" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: Coastal areas of <strong>Hokkaido</strong>.<br>
+                    <strong>Flavor</strong>: Sweet and savory miso glaze over salmon and vegetables, cooked on a griddle.<br>
+                    <strong>Cultural Significance</strong>: A communal dish, showcasing <strong>Hokkaido</strong>’s fishing heritage and family dining traditions.
+                </p> <!-- Thay thế nội dung thông tin món ăn -->
+            </div>
+            </div>
+        </section>
+        
         <section id="recipe-details">
-            <h2>Ingredients</h2></a>
+            <h2>Ingredients</h2>
             <ul>
-                <li>200g bột trắng</li>
-                <li>...</li>
+                <!-- Thêm hoặc thay thế nguyên liệu ở đây -->
+                <li>2 Salmon Fillets</li>
+                <li>A sprinkle of Salt</li>
+                <li>2 tsp Sake</li>
+              
+                <li>1/2 Onion (100g/3.53 oz)</li>
+                <li>2 Cabbage Leaves (200g/7.05 oz)</li>
+                <li>2 Shiitake Mushrooms</li>
+                <li>50g Shimeji Mushrooms</li>
+                <li>1 Potato</li>
+                <li>1 Bell Pepper</li>
+                <li>1/2 Long Green Onion</li>
+                <li>5 tbsp Frozen Corn</li>
+                <li>2 tsp Butter</li>
+              
+                <li>2 tbsp Miso</li>
+                <li>2 tbsp Sake</li>
+                <li>1 tsp Soy Sauce</li>
+                <li>2 tsp Sugar</li>
+                <li>1 tsp Grated Ginger Root</li>
+                <li>Vegetable Oil</li>
+              
+                <li>1 tablespoon (tbsp) = 15 ml, 1 teaspoon (tsp) = 5 ml</li><!-- Ví dụ: 2 Aburaage -->
+                <!-- Tiếp tục thêm các nguyên liệu khác -->
             </ul>
 
             <h2>Instructions</h2>
-            <p>1. cách chế biến</p>
+            <ol>
+                <!-- Thêm hoặc thay thế các bước hướng dẫn ở đây -->
+                <li>Sprinkle salmon fillets with salt and sake. Let rest for 10 minutes.</li>
+                <li>Slice onion, cabbage, mushrooms, potato, bell pepper, and green onion into bite-sized pieces.</li>
+                <li>Combine miso, sake, soy sauce, sugar, and grated ginger in a bowl.</li>            
+                <li>Heat vegetable oil in a pan, stir-fry all vegetables until slightly tender.</li>
+                <li>Place salmon fillets on top of the vegetables, cover, and steam for 5-7 minutes.</li>
+                <li>Pour the sauce over the salmon and vegetables. Add butter and cook until everything is well-coated and aromatic.</li>
+                <li>Plate salmon and vegetables. Enjoy warm!</li><!-- Ví dụ: Prepare the aburaage. -->
+                <!-- Tiếp tục thêm các bước hướng dẫn khác -->
+            </ol>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ydQ7d-VBiFM?si=NoR18iqyDueXiWkZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
             
-            <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ydQ7d-VBiFM?si=NoR18iqyDueXiWkZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
         </section>
     </main>
 </body>

@@ -3,39 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Cook - Zangi</title>
+    <title>How To Cook - Okinawa Soba</title> <!-- Thay thế [Dish Name] với tên món ăn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/howtocook.css">
     <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
 </head>
 <body>
-   
-    <div id="recipe-content"></div>
     <header>
-        <h1>Zingi</h1>
+        <h1>Okinawa Soba</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
         <nav>
+            <!--Menu-->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="menu">
+                  <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                  <ul class="submenu">
+                      <li><a href="/views/pages/page1.html">Home</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/credits">Credits</a></li>
+                      <li><a href="/views/pages/profile.html">Profile</a></li>
+                      <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                  </ul>
+              </li>
             </ul>
+        <script src="/public/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
     </header>
     <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images3/Okinawa_Soba.jpg" alt="Okinawa Soba" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: Okinawa Soba is a specialty from Okinawa Prefecture, known for its unique noodles and savory broth.<br>
+                    <strong>Flavor</strong>: The dish features chewy wheat noodles in a rich and savory broth, typically made with pork or chicken, and topped with tender pork belly, fish cakes, and green onions.<br>
+                    <strong>Cultural Significance</strong>: Okinawa Soba is an iconic dish in Okinawa, often enjoyed as a comfort food and a part of the island's unique culinary heritage.
+                </p>
+                
+            </div>
+            </div>
+        </section>
+        
         <section id="recipe-details">
-            <h2>Ingredients</h2></a>
+            <h2>Ingredients</h2>
             <ul>
-                <li>200g bột trắng</li>
-                <li>...</li>
+                <li>Okinawa Soba noodles: 2 servings (or substitute with udon noodles if unavailable)</li>
+                <li>Pork belly (rafute): 200g, thinly sliced</li>
+                <li>Chicken stock or pork broth: 4 cups</li>
+                <li>Soy sauce: 2 tablespoons</li>
+                <li>Sake: 1 tablespoon</li>
+                <li>Mirin: 1 tablespoon</li>
+                <li>Fish cakes (chikuwa or kamaboko): 2-3 slices</li>
+                <li>Green onions: 2 stalks, chopped</li>
+                <li>Ginger: 1-inch piece, sliced thinly</li>
+                <li>Sesame oil: 1 teaspoon (for frying pork belly)</li>
+                <li>Salt and pepper: To taste</li>
             </ul>
+            
 
             <h2>Instructions</h2>
-            <p>1. cách chế biến</p>
+            <ol>
+                <li>Start by preparing the broth. In a pot, bring the chicken stock or pork broth to a simmer. Add soy sauce, sake, mirin, and ginger slices. Let the broth simmer for 15-20 minutes to develop flavor.</li>
+                <li>While the broth is simmering, heat sesame oil in a separate pan over medium heat. Add the pork belly slices and cook until browned and crispy on the edges. Season with salt and pepper to taste. Remove from the pan and set aside.</li>
+                <li>Cook the Okinawa Soba noodles according to the package instructions (usually by boiling them for a few minutes). Drain and set aside.</li>
+                <li>Once the broth is ready, strain out the ginger slices. Add the cooked noodles into the pot and allow them to soak in the broth for 1-2 minutes to absorb the flavors.</li>
+                <li>Serve the noodles in bowls, topping with the cooked pork belly, fish cakes, and chopped green onions. Optionally, garnish with more ginger or sesame seeds.</li>
+                <li>Enjoy your Okinawa Soba hot, and savor the unique blend of flavors from the rich broth and tender toppings.</li>
+            </ol>
             
-            <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MxRcCfgrTkc?si=oTEhD78pWB7j0UFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y3gjNdnRSAs?si=pD1fyUP6TrrXzEHE&amp;start=34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
+            
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
         </section>
     </main>
 </body>

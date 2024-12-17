@@ -3,39 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Cook - Zangi</title>
+    <title>How To Cook - Matsuba Gani Shabu</title> <!-- Thay thế [Dish Name] với tên món ăn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/howtocook.css">
     <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
 </head>
 <body>
-   
-    <div id="recipe-content"></div>
     <header>
-        <h1>Zingi</h1>
+        <h1>Matsuba Gani Shabu</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
         <nav>
+            <!--Menu-->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="menu">
+                  <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                  <ul class="submenu">
+                      <li><a href="/views/pages/page1.html">Home</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/credits">Credits</a></li>
+                      <li><a href="/views/pages/profile.html">Profile</a></li>
+                      <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                  </ul>
+              </li>
             </ul>
+        <script src="/public/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
     </header>
     <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images2/matsuba_gani_shabu.jpg" alt="Matsuba Gani Shabu" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: Matsuba Gani Shabu originates from the coastal regions of Japan, where Matsuba crab is found in abundance, especially in the Sea of Japan.<br>
+                    <strong>Flavor</strong>: The sweet, delicate meat of Matsuba crab is complemented by a savory, umami-rich broth, with each bite offering a clean, refreshing taste.<br>
+                    <strong>Cultural Significance</strong>: Matsuba Gani is a prized delicacy in Japan, often enjoyed during the colder months as a festive or celebratory dish. The shabu-shabu style of preparation allows the natural flavor of the crab to be the star of the dish.
+                </p>
+                
+            </div>
+            </div>
+        </section>
+        
         <section id="recipe-details">
-            <h2>Ingredients</h2></a>
+            <h2>Ingredients</h2>
             <ul>
-                <li>200g bột trắng</li>
-                <li>...</li>
+                <li>Matsuba crab (snow crab): 1-2 crabs, cleaned and split into pieces</li>
+                <li>Shabu-shabu broth (kombu dashi or chicken broth): 4-5 cups</li>
+                <li>Shoyu (soy sauce): 2 tablespoons</li>
+                <li>Mirin: 2 tablespoons</li>
+                <li>Sake: 2 tablespoons</li>
+                <li>Shichimi togarashi (Japanese chili pepper mix): For seasoning (optional)</li>
+                <li>Vegetables (e.g., napa cabbage, shiitake mushrooms, enoki mushrooms): For garnish and added flavor</li>
+                <li>Udon or soba noodles: For serving (optional)</li>
+                <li>Ponzu sauce: For dipping</li>
             </ul>
+            
 
             <h2>Instructions</h2>
-            <p>1. cách chế biến</p>
+            <ol>
+                <li>Prepare the shabu-shabu broth by simmering kombu (kelp) or chicken in water for about 10 minutes. Remove the kombu, then add soy sauce, mirin, and sake to the broth and bring it to a gentle simmer.</li>
+                <li>Place the Matsuba crab pieces in the simmering broth, cooking each piece for about 1-2 minutes, just until the meat becomes opaque and tender.</li>
+                <li>While cooking the crab, prepare vegetables like napa cabbage, mushrooms, and any other desired accompaniments. These can also be added to the broth for additional flavor.</li>
+                <li>Serve the crab and vegetables in bowls with a small side of ponzu sauce for dipping. Optionally, add some noodles to the broth towards the end of the meal for a hearty finish.</li>
+                <li>Sprinkle a little shichimi togarashi (chili pepper mix) on top for an extra kick, if desired.</li>
+            </ol>
             
-            <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MxRcCfgrTkc?si=oTEhD78pWB7j0UFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/d2FEjI3Ykf0?si=dY9s1i4Sfr0VQC4f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
+            
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
         </section>
     </main>
 </body>

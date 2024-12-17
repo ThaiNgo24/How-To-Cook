@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Cook - Credits</title>
+    <link rel="stylesheet" href="/public/css/howtocook.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        .credits-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .credits-info {
+            background-color: #f9f9fc;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+
+        .credits-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #b22222;
+        }
+
+        .credits-info p,
+        .credits-info ul {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .credits-info ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .credits-info li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease, margin-top 0.3s ease
+        }
+
+        .credits-info li:hover {
+            transform: translateY(-8px) scale(1.05);
+        }
+
+        .credits-info li ion-icon {
+            margin-right: 10px;
+            color: #333; 
+            font-size: 1.6rem;  
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Credits</h1>
+        <nav>
+            <ul>
+                <li class="menu">
+                    <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                    <ul class="submenu">
+                        <li><a href="/views/pages/page1.html">Home</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/credits">Credits</a></li>
+                        <li><a href="/views/pages/profile.html">Profile</a></li>
+                        <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <script src="/public/js/menu.js"></script>
+        </nav>
+    </header>
+
+    <main>
+        <div class="credits-container">
+
+            <!-- Credits Information -->
+            <div class="credits-info">
+                <h3>Developers</h3>
+                <ul>
+                    <li><ion-icon name="person-circle-outline"></ion-icon><strong>Ngo Quoc Thai:</strong><span style="margin-left: 10px;">Main Developer</span></li>
+                    <li><ion-icon name="person-circle-outline"></ion-icon><strong>Nguyen Tuan Hung:</strong><span style="margin-left: 10px;">Collecting Information</span></li>
+                    <li><ion-icon name="person-circle-outline"></ion-icon><strong>Tran Van Quyen:</strong><span style="margin-left: 10px;">Code Reviews</span></li>
+                </ul>
+
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li><ion-icon name="logo-html5"></ion-icon>HTML</li>
+                    <li><ion-icon name="logo-css3"></ion-icon>CSS</li>
+                    <li><ion-icon name="logo-javascript"></ion-icon>JavaScript</li>
+                    <li><ion-icon name="logo-nodejs"></ion-icon>NodeJS</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        © 2024 How To Cook | All Rights Reserved
+    </footer>
+</body>
+</html>

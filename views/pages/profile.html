@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Cook - User Profile</title>
+    <link rel="stylesheet" href="/public/css/howtocook.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js"></script> 
+    <style>
+        .profile-container {
+            width: 80%;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-header h1 {
+            font-family: 'Caveat', cursive;
+            color: #333;
+            margin: 0;
+        }
+
+        .profile-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 20px;
+        }
+
+        .avatar-section {
+            width: 30%;
+            text-align: center;
+            margin-right: 20px;
+            border-right: 2px solid #ccc;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            cursor: pointer;
+            background-color: #5C6BC0;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+
+        .change-avatar-btn {
+            padding: 10px 20px;
+            background-color: #5C6BC0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .change-avatar-btn:hover {
+            background-color: #3f4e96;
+        }
+
+        .user-details {
+            text-align: left;
+            width: 65%;
+            padding-left: 20px;
+        }
+
+        .user-details h2, .user-details p {
+            color: #333;
+            margin: 5px 0;
+        }
+
+        .avatar-selection {
+            display: none;
+            margin-top: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .avatar-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .avatar-option {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            transition: transform 0.2s ease;
+        }
+
+        .avatar-option:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+        <nav>
+            <ul>
+            <li class="menu">
+                <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                <ul class="submenu">
+                    <li><a href="/views/pages/page1.html">Home</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/credits">Credits</a></li>
+                    <li><a href="/views/pages/profile.html">Profile</a></li>
+                    <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                </ul>
+            </li>
+            </ul>
+            <script src="/public/js/menu.js"></script>
+        </nav>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </header>
+    <main>
+        <div class="profile-content">
+            <!-- Avatar Section -->
+            <div class="avatar-section">
+                <div class="avatar" id="avatar">
+                    <span id="avatar-text">How to Cook</span>
+                </div>
+                <button class="change-avatar-btn" id="change-avatar-btn">Change Avatar</button>
+                <div class="avatar-selection" id="avatar-selection">
+                    <h3>Choose an Avatar</h3>
+                    <div class="avatar-list">
+                        <img src="/public/avarta/boy2.jpg" class="avatar-option" data-avatar="/public/avarta/boy2.jpg">
+                        <img src="/public/avarta/girl4.jpg" class="avatar-option" data-avatar="/public/avarta/girl4.jpg">
+                        <img src="/public/avarta/boy1.jpg" class="avatar-option" data-avatar="/public/avarta/boy1.jpg">
+                        <img src="/public/avarta/girl1.jpg" class="avatar-option" data-avatar="/public/avarta/girl1.jpg">
+                        <img src="/public/avarta/girl2.jpg" class="avatar-option" data-avatar="/public/avarta/girl2.jpg">
+                        <img src="/public/avarta/girl3.jpg" class="avatar-option" data-avatar="/public/avarta/girl3.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Details Section -->
+            <div class="user-details">
+                <h2 id="username">Username: </h2>
+                <p id="email">Email: </p>
+            </div>
+        </div>
+
+    <script>
+        // Khi tải trang, lấy thông tin người dùng từ localStorage
+        window.onload = function() {
+            const username = localStorage.getItem('username');
+            const email = localStorage.getItem('userEmail');
+            const userAvatar = localStorage.getItem('userAvatar');
+
+            if (username && email) {
+                document.getElementById('username').textContent = `Username: ${username}`;
+                document.getElementById('email').textContent = `Email: ${email}`;
+            } else {
+                alert('User not logged in.');
+                window.location.href = '/views/pages/login.html';
+            }
+
+            // Kiểm tra avatar đã lưu trong localStorage và hiển thị
+            if (userAvatar) {
+                document.getElementById('avatar').style.backgroundImage = `url(${userAvatar})`;
+                document.getElementById('avatar-text').style.display = 'none'; // Ẩn "How to Cook" nếu có avatar
+            } else {
+                document.getElementById('avatar').style.backgroundColor = '#5C6BC0';
+                document.getElementById('avatar-text').style.display = 'block'; // Hiển thị "How to Cook" khi không có avatar
+            }
+        };
+
+        // Avatar selection functionality
+        document.getElementById('change-avatar-btn').addEventListener('click', function() {
+            const avatarSelection = document.getElementById('avatar-selection');
+            avatarSelection.style.display = avatarSelection.style.display === 'none' ? 'block' : 'none';
+        });
+
+        document.querySelectorAll('.avatar-option').forEach(item => {
+            item.addEventListener('click', function() {
+                const avatarSrc = this.getAttribute('data-avatar');
+                document.getElementById('avatar').style.backgroundImage = `url(${avatarSrc})`;
+                localStorage.setItem('userAvatar', avatarSrc);
+                document.getElementById('avatar-selection').style.display = 'none';
+            });
+        });
+    </script>
+</main>
+<footer>
+    © 2024 How To Cook | All Rights Reserved
+</footer>
+</body>
+</html>

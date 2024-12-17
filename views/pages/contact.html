@@ -3,33 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>How To Cook - Contact</title>
     <link rel="stylesheet" href="/public/css/howtocook.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .contact-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .contact-form {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #b22222;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #b22222;
+            outline: none;
+        }
+
+        .contact-form button {
+            display: inline-block;
+            background-color: #b22222;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #8b1a1a;
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            flex: 1;
+            background-color: #f9f9fc;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #b22222;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #b22222;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #8b1a1a;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px 0;
+            background-color: #333;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+    </style>
 </head>
 <body>
     <header>
         <h1>Contact Us</h1>
         <nav>
             <ul>
-                <li><a href="/views/pages/page1.html">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a><button class="logout" id="login-logout-btn">Logout</button></a></li>
+            <li class="menu">
+                <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                <ul class="submenu">
+                    <li><a href="/views/pages/page1.html">Home</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/credits">Credits</a></li>
+                    <li><a href="/views/pages/profile.html">Profile</a></li>
+                    <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                </ul>
+            </li>
             </ul>
+            <script src="/public/js/menu.js"></script>
         </nav>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </header>
+
     <main>
-        <section id="contact-content">
-            <h2>Get in Touch</h2>
-            <p>If you have any questions, suggestions, or just want to say hello, feel free to reach out to us. We'd love to hear from you!</p>
-            <h2>Contact Information</h2>
-            <p>Email: howtocook@gmail.com</p>
-            <p>Phone: 123 456 7890</p>
-            <p>Address: University of information technology</p>
-        </section>
+        <div class="contact-container">
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=howtocook1424@gmail.com&su=Inquiry">howtocook1424@gmail.com</a></p>
+                <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+                <p><strong>Address:</strong> University of Information Technology</p>
+                <p><strong>Designed by:</strong> Thai Ngo</p>
+            </div>
+        </div>
     </main>
+
+    <footer>
+        © 2024 How To Cook | All Rights Reserved
+    </footer>
 </body>
 </html>

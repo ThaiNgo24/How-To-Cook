@@ -3,39 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Cook - Soup Curry</title>
+    <title>How To Cook - Soup Curry</title> <!-- Thay thế [Dish Name] với tên món ăn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/howtocook.css">
     <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
 </head>
 <body>
-   
-    <div id="recipe-content"></div>
     <header>
-        <h1>Soup Curry</h1>
+        <h1>Soup Curry</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
         <nav>
+            <!--Menu-->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="menu">
+                  <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                  <ul class="submenu">
+                      <li><a href="/views/pages/page1.html">Home</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/credits">Credits</a></li>
+                      <li><a href="/views/pages/profile.html">Profile</a></li>
+                      <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                  </ul>
+              </li>
             </ul>
+        <script src="/public/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
     </header>
     <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images1/soup_curry.jpg" alt="Soup Curry" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: Sapporo, <strong>Hokkaido</strong>, 1970s.<br>
+                    <strong>Flavor</strong>: Spicy, aromatic broth with vibrant vegetables and meat, customizable to heat preferences.<br>
+                    <strong>Cultural Significance</strong>: A modern <strong>Hokkaido</strong> specialty, merging Japanese and South Asian influences.
+                </p><!-- Thay thế nội dung thông tin món ăn -->
+            </div>
+            </div>
+        </section>
+        
         <section id="recipe-details">
-            <h2>Ingredients</h2></a>
+            <h2>Ingredients</h2>
             <ul>
-                <li>200g bột trắng</li>
-                <li>...</li>
+                <!-- Thêm hoặc thay thế nguyên liệu ở đây -->
+                <li>6-8 chicken wings (drumette) or chicken leg pieces</li>
+                <li>1/2 tsp salt</li>
+                <li>1/2 onion</li>
+                <li>1 carrot</li>
+                <li>1 potato</li>
+                <li>1/2 Tbsp ginger grated</li>
+                <li>1/2 Tbsp garlic grated</li>
+                <li>1 Tbsp oil</li>
+                <li>1 Tbsp curry powder</li>
+                <li>1/2 Tbsp garam masala</li>
+                <li>1/2 Tbsp cumin powder</li>
+                <li>2 1/2 cups chicken broth</li>
+                <li>salt and pepper to taste</li>
+                <li>2-3 cups steamed rice</li>
+              
+                <li><strong>Toppings</strong></li>
+                <li>4 asparagus</li>
+                <li>4 slices lotus root</li>
+                <li>2 slices Kabocha squash</li>
+                <li>1/2 red bell pepper</li>
+                <li>3 Tbsp oil</li>
+                <li>1 soft boiled egg</li><!-- Ví dụ: 2 Aburaage -->
+                <!-- Tiếp tục thêm các nguyên liệu khác -->
             </ul>
 
             <h2>Instructions</h2>
-            <p>1. cách chế biến</p>
+            <ol>
+                <!-- Thêm hoặc thay thế các bước hướng dẫn ở đây -->
+                <li>Season chicken wings with salt. Sauté in a pot with oil until browned.</li>
+                <li>Add chopped onion, carrot, potato, ginger, and garlic. Sauté for a few minutes.</li>
+                <li>Stir in curry powder, garam masala, and cumin. Pour in chicken broth. Simmer for 30 minutes.</li>
+                <li>In a separate pan, heat oil and sauté asparagus, lotus root, kabocha squash, and bell pepper.</li>
+                <li>Place steamed rice in bowls, pour the curry soup over, and top with sautéed vegetables and a soft boiled egg.</li><!-- Ví dụ: Prepare the aburaage. -->
+                <!-- Tiếp tục thêm các bước hướng dẫn khác -->
+            </ol>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8wDGvRcqPJM?si=dxTHVQPFfTX-283n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
             
-            <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8wDGvRcqPJM?si=dxTHVQPFfTX-283n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
         </section>
     </main>
 </body>

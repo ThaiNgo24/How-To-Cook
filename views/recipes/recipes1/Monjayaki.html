@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Cook - Monjayaki</title> <!-- Thay thế [Dish Name] với tên món ăn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/howtocook.css">
+    <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
+</head>
+<body>
+    <header>
+        <h1>Monjayaki</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
+        <nav>
+            <!--Menu-->
+            <ul>
+                <li class="menu">
+                  <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                  <ul class="submenu">
+                      <li><a href="/views/pages/page1.html">Home</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/credits">Credits</a></li>
+                      <li><a href="/views/pages/profile.html">Profile</a></li>
+                      <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                  </ul>
+              </li>
+            </ul>
+        <script src="/public/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images1/Monjayaki.jpg" alt="Monjayaki" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: Monjayaki originated in <strong>Tsukishima, Tokyo</strong>, evolving from a children's snack to a popular dish.<br>
+                    <strong>Flavor</strong>: It has a savory taste with cabbage, seafood, and a gooey, crispy dashi-based batter.<br>
+                    <strong>Cultural Significance</strong>: Monjayaki is a communal dish, enjoyed with friends and family.
+                </p><!-- Thay thế nội dung thông tin món ăn -->
+            </div>
+            </div>
+        </section>
+        
+        <section id="recipe-details">
+            <h2>Ingredients</h2>
+            <ul>
+                <!-- Thêm hoặc thay thế nguyên liệu ở đây -->
+                <li>Flour: About 100g</li>
+                <li>Dashi stock: 200ml (you can use water if dashi is not available)</li>
+                <li>Cabbage: 100g, finely shredded</li>
+                <li>Shrimp (or squid, depending on preference): 100g, finely chopped</li>
+                <li>Pork (thinly sliced): 50-100g (optional)</li>
+                <li>Mizuna (Japanese greens): A little, finely chopped (optional)</li>
+                <li>Spring onions: 2-3 stalks, chopped</li>
+                <li>Ginger: A small piece, finely chopped</li>
+                <li>Tonkatsu sauce or Okonomiyaki sauce: 2-3 tablespoons</li>
+                <li>Japanese mayonnaise: A little (optional)</li>
+                <li>Cheese (optional): A little, grated</li> <!-- Ví dụ: 2 Aburaage -->
+                <!-- Tiếp tục thêm các nguyên liệu khác -->
+            </ul>
+
+            <h2>Instructions</h2>
+            <ol>
+                <li>Prepare the batter: Mix the flour with dashi stock until smooth, making sure there are no lumps.</li>
+                <li>Stir-fry ingredients: Heat a skillet and stir-fry the pork, shrimp/squid, spring onions, ginger, and cabbage until cooked.</li>
+                <li>Add the batter: Pour the batter over the cooked ingredients in the skillet and mix everything together until the ingredients are evenly coated.</li>
+                <li>Add sauce and seasoning: When the dish is nearly done, add the tonkatsu or okonomiyaki sauce and mix well. If you like, you can also add a bit of Japanese mayonnaise and cheese on top for extra flavor.</li>
+                <li>Serve hot: Once finished, eat the monjayaki directly from the skillet while it’s hot using chopsticks or a spoon.</li>
+            </ol>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2p1NgsQlnvo?si=RHpNfxpD3EnBrx8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
+            
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
+        </section>
+    </main>
+</body>
+</html>

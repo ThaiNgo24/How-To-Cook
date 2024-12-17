@@ -21,15 +21,21 @@
     <header>
         <h1>How to Cook</h1>
         <nav>
-            <!--Menu-->
-            <ul>
-                <li><a href="/views/pages/page1.html">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a><button class="logout" id="login-logout-btn">Logout</button></a></li>
-            </ul>
-
-        </nav>
+          <!--Menu-->
+          <ul>
+              <li class="menu">
+                <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                <ul class="submenu">
+                    <li><a href="/views/pages/page1.html">Home</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/credits">Credits</a></li>
+                    <li><a href="/views/pages/profile.html">Profile</a></li>
+                    <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                </ul>
+            </li>
+          </ul>
+      <script src="/public/js/menu.js"></script>
+      </nav>
         <!--Thanh tìm kiếm-->
         <div class="search-box">
             <form class="search-form">
@@ -43,6 +49,8 @@
             </div>
         </div> 
     </header>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <main>
         <section class="region1">
             <h2>Chubu</h2>
@@ -252,7 +260,7 @@
                     <div class="item">
                         <a href="/views/recipes/recipes2/okonomiyaki_hiroshima.html">    
                             <div class="image-container">
-                              <img src="/images/images2/okonomiyaki_hiroshima.jpg" alt="Okonomiyaki Hiroshima">
+                              <img src="/images/images2/Okonomiyaki Hiroshima" alt="Okonomiyaki Hiroshima">
                             </div>
                             <div class="text-content">
                               <p>Okonomiyaki Hiroshima</p>
@@ -307,11 +315,12 @@
                     <div class="item">
                       <a href="/views/recipes/recipes2/kibinago_no_sunomono.html">    
                           <div class="image-container">
-                            <img src="/images/images2/kibinago_no_sunomono.jpg" alt="Kibinago No Sunomono">
+                            <img src="/public/images/images2/sunomono.jpg" alt="Kibinago No Sunomono">
                           </div>
                           <div class="text-content">
-                            <p>Kibinago No Sunomono</p>
-                            <p class="description">A tangy and refreshing salad made with fresh sprats marinated in vinegar 🐟</p>
+                            <p>Sunomono</p>
+                            <p class="description">
+                              Sunomono is a light, tangy Japanese salad typically made with cucumbers, seafood, and a vinegar-based dressing. 🥒🍤</p>
                           </div>
                       </a>  
                     </div>

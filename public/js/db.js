@@ -8,8 +8,10 @@ mongoose.connect('mongodb+srv://Thaingo:Gz6etxdvVgf3cs3S@cluster0.j83xa.mongodb.
 }).then(() => console.log('Connected to MongoDB')).catch(err => console.error(err));
 
 const ratingSchema = new mongoose.Schema({
-    rating: { type: Number, required: true, min: 1, max: 5 },
-    timestamp: { type: Date, default: Date.now }
+  userId: { type: String, required: true },
+  rating: { type: Number, required: true, min: 1, max: 5 },
+  dishName: { type: String, required: true },  
+  timestamp: { type: Date, default: Date.now }
 });
 
 const Rating = mongoose.model('Rating', ratingSchema);
@@ -17,11 +19,10 @@ const Rating = mongoose.model('Rating', ratingSchema);
 module.exports = Rating;
 
 const commentSchema = new mongoose.Schema({
-  comment: { type: String, required: true },  // Nội dung bình luận
-  userId: { type: String, required: true },  // ID người dùng bình luận
-  username: { type: String, required: true }, // Tên người dùng
-  dishId: { type: String, required: true },   // ID món ăn mà bình luận thuộc về
-  createdAt: { type: Date, default: Date.now } // Thời gian tạo bình luận
+  comment: { type: String, required: true },  
+  userId: { type: String, required: true },  
+  username: { type: String, required: true }, 
+  createdAt: { type: Date, default: Date.now } 
 });
 
 const Comment = mongoose.model('Comment', commentSchema);

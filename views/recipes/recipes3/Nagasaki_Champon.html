@@ -3,39 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Cook - Zangi</title>
+    <title>How To Cook - Nagasaki Champon</title> <!-- Thay thế [Dish Name] với tên món ăn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/howtocook.css">
     <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
 </head>
 <body>
-   
-    <div id="recipe-content"></div>
     <header>
-        <h1>Zingi</h1>
+        <h1>Nagasaki Champon</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
         <nav>
+            <!--Menu-->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="menu">
+                  <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                  <ul class="submenu">
+                      <li><a href="/views/pages/page1.html">Home</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/credits">Credits</a></li>
+                      <li><a href="/views/pages/profile.html">Profile</a></li>
+                      <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                  </ul>
+              </li>
             </ul>
+        <script src="/public/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
     </header>
     <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images3/Nagasaki_Champon.jpg" alt="Nagasaki Champon" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: Nagasaki Champon originates from Nagasaki, Japan, and is a unique fusion of Chinese and Japanese culinary styles.<br>
+                    <strong>Flavor</strong>: The dish has a rich, savory broth made from pork and seafood, complemented by chewy noodles and a variety of vegetables and meats.<br>
+                    <strong>Cultural Significance</strong>: Champon is a beloved local dish in Nagasaki, often enjoyed by families and is commonly served in casual eateries throughout the city.
+                </p>
+                
+            </div>
+            </div>
+        </section>
+        
         <section id="recipe-details">
-            <h2>Ingredients</h2></a>
+            <h2>Ingredients</h2>
             <ul>
-                <li>200g bột trắng</li>
-                <li>...</li>
+                <li>Ramen noodles (or champon noodles): 200g</li>
+                <li>Pork belly (thinly sliced): 100g</li>
+                <li>Shrimp (peeled and deveined): 4-5 pieces</li>
+                <li>Squid (sliced): 1/2 small squid</li>
+                <li>Cabbage (chopped): 1/4 head</li>
+                <li>Carrot (julienned): 1 small carrot</li>
+                <li>Shiitake mushrooms (sliced): 2-3 mushrooms</li>
+                <li>Garlic (minced): 2 cloves</li>
+                <li>Ginger (minced): 1 teaspoon</li>
+                <li>Chicken or pork broth: 4 cups</li>
+                <li>Soy sauce: 2 tablespoons</li>
+                <li>Sake: 1 tablespoon</li>
+                <li>Salt and pepper: To taste</li>
+                <li>Sesame oil: 1 tablespoon</li>
+                <li>Green onions (chopped): For garnish</li>
+                <li>Bean sprouts (optional): For garnish</li>
             </ul>
+            
 
             <h2>Instructions</h2>
-            <p>1. cách chế biến</p>
+            <ol>
+                <li>Cook the ramen noodles according to package instructions, then drain and set aside.</li>
+                <li>In a large pot, heat sesame oil over medium heat. Add the minced garlic and ginger, and sauté until fragrant.</li>
+                <li>Add the sliced pork belly and cook until browned. Then, add the shrimp and squid, cooking for an additional 2-3 minutes.</li>
+                <li>Add the cabbage, carrot, and shiitake mushrooms, and stir-fry for a few minutes until the vegetables start to soften.</li>
+                <li>Pour in the chicken or pork broth and bring to a simmer. Season with soy sauce, sake, salt, and pepper. Let it simmer for about 5-10 minutes until the flavors meld together.</li>
+                <li>Place the cooked noodles in a bowl and pour the hot broth and toppings over the noodles.</li>
+                <li>Garnish with chopped green onions and optional bean sprouts. Serve hot and enjoy!</li>
+            </ol>
             
-            <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MxRcCfgrTkc?si=oTEhD78pWB7j0UFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/na2CpDcm6DM?si=5QN4_1nfdxXX_k88&amp;start=79" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
+            
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
         </section>
     </main>
 </body>

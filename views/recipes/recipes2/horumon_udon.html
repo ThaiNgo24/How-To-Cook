@@ -3,39 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Cook - Zangi</title>
+    <title>How To Cook - Horumon Udon</title> <!-- Thay thế [Dish Name] với tên món ăn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/howtocook.css">
     <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
 </head>
 <body>
-   
-    <div id="recipe-content"></div>
     <header>
-        <h1>Zingi</h1>
+        <h1>Horumon Udon</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
         <nav>
+            <!--Menu-->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="menu">
+                  <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                  <ul class="submenu">
+                      <li><a href="/views/pages/page1.html">Home</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/credits">Credits</a></li>
+                      <li><a href="/views/pages/profile.html">Profile</a></li>
+                      <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                  </ul>
+              </li>
             </ul>
+        <script src="/public/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
     </header>
     <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images2/horumon_udon.jpg" alt="Horumon Udon" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: Horumon Udon is a regional dish, particularly popular in Osaka and other parts of Western Japan, where horumon (offal) is commonly used in various dishes.<br>
+                    <strong>Flavor</strong>: The dish combines the chewy texture of udon noodles with the rich, savory flavor of stir-fried horumon, creating a satisfying and hearty meal. The sauce adds an extra umami punch to the overall dish.<br>
+                    <strong>Cultural Significance</strong>: Horumon Udon is often enjoyed in casual dining spots like izakayas or specialty restaurants, where it's served as a filling and flavorful comfort food.
+                </p>
+                
+            </div>
+            </div>
+        </section>
+        
         <section id="recipe-details">
-            <h2>Ingredients</h2></a>
+            <h2>Ingredients</h2>
             <ul>
-                <li>200g bột trắng</li>
-                <li>...</li>
+                <li>Udon noodles: 200g (fresh or frozen)</li>
+                <li>Horumon (pork or beef offal): 150g, cleaned and chopped</li>
+                <li>Onion: 1, thinly sliced</li>
+                <li>Green onion: 2 stalks, chopped</li>
+                <li>Bell pepper: 1, sliced (optional)</li>
+                <li>Ginger: 1 teaspoon, grated</li>
+                <li>Garlic: 2 cloves, minced</li>
+                <li>Soy sauce: 2 tablespoons</li>
+                <li>Sake: 1 tablespoon</li>
+                <li>Mirin: 1 tablespoon</li>
+                <li>Oyster sauce: 1 tablespoon (optional, for extra depth)</li>
+                <li>Sesame oil: 1 teaspoon</li>
+                <li>Chili flakes: A pinch (optional, for spiciness)</li>
+                <li>Salt and pepper: To taste</li>
             </ul>
+            
 
             <h2>Instructions</h2>
-            <p>1. cách chế biến</p>
+            <ol>
+                <li>Cook the udon noodles according to the package instructions. Drain and set aside.</li>
+                <li>Heat sesame oil in a large pan or wok over medium-high heat. Add the horumon (offal) and stir-fry until it begins to brown and crisp slightly, about 5-7 minutes.</li>
+                <li>Add the onion, garlic, ginger, and bell pepper (if using) to the pan. Stir-fry for another 2-3 minutes until the vegetables are softened.</li>
+                <li>In a small bowl, mix the soy sauce, sake, mirin, and oyster sauce (if using). Pour this sauce mixture over the stir-fried horumon and vegetables, and toss to coat everything evenly.</li>
+                <li>Add the cooked udon noodles to the pan and toss them with the horumon and vegetables. Stir-fry for 1-2 minutes, allowing the noodles to absorb the sauce and heat through.</li>
+                <li>Season with salt, pepper, and chili flakes (if desired) to taste. Garnish with chopped green onions before serving.</li>
+            </ol>
             
-            <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MxRcCfgrTkc?si=oTEhD78pWB7j0UFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VoA-cvUBIZ0?si=q5eZrkLp9Z50daOB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
+            
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
         </section>
     </main>
 </body>

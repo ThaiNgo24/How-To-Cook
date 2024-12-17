@@ -3,39 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Cook - Zangi</title>
+    <title>How To Cook - Chicken Nanban</title> <!-- Thay thế [Dish Name] với tên món ăn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/howtocook.css">
     <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
 </head>
 <body>
-   
-    <div id="recipe-content"></div>
     <header>
-        <h1>Zingi</h1>
+        <h1>Chicken Nanban</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
         <nav>
+            <!--Menu-->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="menu">
+                  <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                  <ul class="submenu">
+                      <li><a href="/views/pages/page1.html">Home</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/credits">Credits</a></li>
+                      <li><a href="/views/pages/profile.html">Profile</a></li>
+                      <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                  </ul>
+              </li>
             </ul>
+        <script src="/public/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
     </header>
     <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images3/Chicken_Nanban.jpg" alt="Chicken Nanban" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: Chicken Nanban is a dish from the Kyushu region of Japan, inspired by Western-style fried chicken.<br>
+                    <strong>Flavor</strong>: The crispy chicken is coated in a tangy vinegar-based sauce and topped with a creamy, homemade tartar sauce.<br>
+                    <strong>Cultural Significance</strong>: A popular comfort food, Chicken Nanban is widely enjoyed in Japan and often served in casual eateries and restaurants.
+                </p>
+                
+            </div>
+            </div>
+        </section>
+        
         <section id="recipe-details">
-            <h2>Ingredients</h2></a>
+            <h2>Ingredients</h2>
             <ul>
-                <li>200g bột trắng</li>
-                <li>...</li>
+                <li>Chicken breast (or thighs): 2 pieces, boneless and skinless</li>
+                <li>Flour: 1/4 cup</li>
+                <li>Cornstarch: 1/4 cup</li>
+                <li>Panko breadcrumbs: 1 cup</li>
+                <li>Egg: 1 (beaten)</li>
+                <li>Vegetable oil: For frying</li>
+                <li>Salt and pepper: To taste</li>
+                <li>Rice vinegar: 3 tablespoons</li>
+                <li>Soy sauce: 2 tablespoons</li>
+                <li>Sugar: 1 tablespoon</li>
+                <li>Mirin: 1 tablespoon</li>
+                <li>For tartar sauce: Mayonnaise: 1/4 cup, Chopped pickles: 2 tablespoons, Chopped onions: 1 tablespoon, Lemon juice: 1 teaspoon</li>
             </ul>
+            
 
             <h2>Instructions</h2>
-            <p>1. cách chế biến</p>
+            <ol>
+                <li>Season the chicken fillets with salt and pepper on both sides.</li>
+                <li>In a shallow dish, mix the flour, cornstarch, and panko breadcrumbs. Dip each chicken fillet into the flour mixture, ensuring it's fully coated. Then dip into the beaten egg and coat it again in the breadcrumb mixture.</li>
+                <li>Heat vegetable oil in a frying pan over medium heat. Fry the chicken fillets for about 3-4 minutes per side, or until golden brown and crispy. Remove from the oil and drain on paper towels.</li>
+                <li>In a separate small pan, combine the rice vinegar, soy sauce, sugar, and mirin. Heat over low heat until the sugar dissolves, then remove from heat. Pour this sauce over the cooked chicken fillets while they are still hot, allowing them to absorb the flavor.</li>
+                <li>For the tartar sauce, mix the mayonnaise, chopped pickles, chopped onions, and lemon juice in a small bowl. Adjust the seasoning with salt and pepper to taste.</li>
+                <li>Top the chicken fillets with the prepared tartar sauce and serve with steamed rice and a side of vegetables.</li>
+            </ol>
             
-            <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MxRcCfgrTkc?si=oTEhD78pWB7j0UFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EAx4pTCBtW0?si=4uDL0iE8aEnijVGo&amp;start=34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
+            
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
         </section>
     </main>
 </body>

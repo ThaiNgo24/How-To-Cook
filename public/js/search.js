@@ -64,12 +64,12 @@ document.addEventListener('DOMContentLoaded', function() {
       { name: 'Hoba Miso', ImageBitmap: '/images/images2/hoba_miso.jpg', url: '/views/recipes/recipes2/hoba_miso.html' },
       { name: 'Oden', ImageBitmap: '/images/images2/oden.jpg', url: '/views/recipes/recipes2/oden.html' },
       //Chugoku
-      { name: 'Okonomiyaki Hiroshima', ImageBitmap: '/images/images2/okonomiyaki_hiroshima.jpg', url: '/views/recipes/recipes2/okonomiyaki_hiroshima.html' },
+      { name: 'Okonomiyaki Hiroshima', ImageBitmap: '/images/images2/Okonomiyaki Hiroshima.jpg', url: '/views/recipes/recipes2/okonomiyaki_hiroshima.html' },
       { name: 'Nizakana', ImageBitmap: '/images/images2/nizakana.jpg', url: '/views/recipes/recipes2/nizakana.html' },
-      { name: 'Kaki Furai', ImageBitmap: '/images/images2/kaki_furai.jpg', url: '/views/recipes/recipes2/kaki_furai.html' },
+      { name: 'Kaki Furai', ImageBitmap: '/images/images2/Kaki Furai.jpg', url: '/views/recipes/recipes2/kaki_furai.html' },
       { name: 'Matsuba Gani Shabu', ImageBitmap: '/images/images2/matsuba_gani_shabu.jpg', url: '/views/recipes/recipes2/matsuba_gani_shabu.html' },
       { name: 'Izumo Soba', ImageBitmap: '/public/images/images2/izumo_soba.jpg', url: '/views/recipes/recipes2/izumo_soba.html' },
-      { name: 'Kibinago No Sunomono', ImageBitmap: '/images/images2/kibinago_no_sunomono.jpg', url: '/views/recipes/recipes2/kibinago_no_sunomono.html' },
+      { name: 'Sunomono', ImageBitmap: '/images/images2/sunomono.jpg', url: '/views/recipes/recipes2/kibinago_no_sunomono.html' },
       { name: 'Horumon Udon', ImageBitmap: '/images/images2/horumon_udon.jpg', url: '/views/recipes/recipes2/horumon_udon.html' },
       { name: 'Bara Sushi', ImageBitmap: '/images/images2/bara_sushi.jpg', url: '/views/recipes/recipes2/bara_sushi.html' },
       //Shikoku
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (userId) {
           // Xử lý đăng xuất
           localStorage.removeItem('userId');
-          window.location.href = '/login'; // Chuyển hướng đến trang login
+          window.location.href = '/register'; // Chuyển hướng đến trang login
       } else {
           // Chuyển đến trang login
           window.location.href = '/login';

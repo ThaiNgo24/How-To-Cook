@@ -11,6 +11,7 @@ const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 const User = require('./models/User'); 
 const Rating = require('./models/Rating'); 
+require('dotenv').config();
 
 const app = express();
 app.use(cookieParser());  // Để sử dụng cookie
@@ -46,8 +47,8 @@ app.get('/page1', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'pages', 'page1.html'));
 });
 
-app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'pages', 'about.html'));
+app.get('/credits', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'pages', 'credits.html'));
 });
 
 app.get('/contact', (req, res) => {
@@ -69,20 +70,41 @@ app.use((err, req, res, next) => {
 
 app.use('/api/ratings', ratingRouter);
 
-// Route đăng nhập và tạo token JWT
-app.post('/login', (req, res) => {
-    const { username, password } = req.body;
+app.post('/register', async (req, res) => {
+    const { email, password } = req.body;
 
-    User.findOne({ username, password })
-        .then(user => {
-            if (user) {
-                const token = jwt.sign({ userId: user._id }, 'your_secret_key', { expiresIn: '1h' });
-                res.json({ message: 'Login successful', token });
-            } else {
-                res.status(401).json({ message: 'Invalid credentials' });
-            }
-        })
-        .catch(err => res.status(500).json({ message: 'Error during login', error: err }));
+    // Lấy phần trước @ từ email làm username
+    const username = email.split('@')[0];
+
+    try {
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ message: 'Email is already registered!' });
+        }
+
+        const newUser = new User({ username, email, password });
+        await newUser.save();
+        res.status(201).json({ message: 'Registration successful' });
+    } catch (error) {
+        res.status(500).json({ message: 'Error during registration', error: error.message });
+    }
+});
+
+app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+        const user = await User.findOne({ email, password });
+        if (!user) {
+            return res.status(401).json({ message: 'Invalid email or password' });
+        }
+
+        // Tạo token JWT và trả về thông tin username và id
+        const token = jwt.sign({ userId: user._id, username: user.username }, 'your_secret_key', { expiresIn: '1h' });
+        res.json({ message: 'Login successful', token, username: user.username, userId: user._id });
+    } catch (error) {
+        res.status(500).json({ message: 'Error during login', error: error.message });
+    }
 });
 
 // Middleware xác thực JWT
@@ -103,25 +125,28 @@ const authenticateToken = (req, res, next) => {
 
 // Route gửi đánh giá, chỉ cho phép người dùng đánh giá một lần
 app.post('/submit-rating', async (req, res) => {
-    const { rating, userId } = req.body; // Nhận dữ liệu rating và userId từ request
+    const { rating, userId, dishName } = req.body;
+    console.log(req.body);  // In ra dữ liệu nhận được từ client
 
     try {
         // Kiểm tra xem người dùng đã đánh giá chưa
-        const existingRating = await Rating.findOne({ userId });
+        const existingRating = await Rating.findOne({ userId, dishName });
         if (existingRating) {
             return res.status(400).json({ message: 'You have already rated' });
         }
 
-        // Tạo đối tượng rating mới và lưu vào cơ sở dữ liệu
+        // Tạo đối tượng rating mới và lưu vào MongoDB
         const newRating = new Rating({
             rating: rating,
             userId: userId,  // Lưu ID người dùng
+            dishName: dishName,  // Lưu tên món ăn
             timestamp: new Date()
         });
 
         await newRating.save(); // Lưu rating vào MongoDB
         res.status(200).json({ message: 'Rating submitted successfully' });
     } catch (error) {
+        console.error('Error submitting rating:', error);
         res.status(500).json({ message: 'Failed to submit rating', error: error.message });
     }
 });
@@ -195,6 +220,46 @@ app.post('/api/comments/submit-comment', async (req, res) => {
     }
 });
 
+app.post('/delete-rating', async (req, res) => {
+    const { userId, dishName } = req.body;
+
+    console.log(`Request received to delete rating for userId: ${userId} and dishName: ${dishName}`);
+
+    try {
+        const existingRating = await Rating.findOne({ userId, dishName });
+        if (!existingRating) {
+            console.log(`No rating found for userId: ${userId} and dishName: ${dishName}`);
+            return res.status(404).json({ message: 'No rating found to remove.' });
+        }
+
+        const deletedRating = await Rating.findOneAndDelete({ userId, dishName });
+        console.log(`Rating removed for userId: ${userId} and dishName: ${dishName}`);
+        return res.status(200).json({ message: 'Rating removed successfully' });
+    } catch (error) {
+        console.error('Error removing rating:', error);
+        return res.status(500).json({ message: 'Failed to remove rating', error: error.message });
+    }
+});
+
+app.post('/add-rating', async (req, res) => {
+    const { userId, dishName, rating } = req.body;
+
+    try {
+        // Kiểm tra xem người dùng đã đánh giá món ăn này chưa
+        const existingRating = await Rating.findOne({ userId, dishName });
+        if (existingRating) {
+            return res.status(400).json({ message: 'You have already rated this dish.' });
+        }
+
+        // Thêm đánh giá mới
+        const newRating = new Rating({ userId, dishName, rating });
+        await newRating.save();
+        return res.status(200).json({ message: 'Rating added successfully.' });
+    } catch (error) {
+        console.error('Error adding rating:', error);
+        return res.status(500).json({ message: 'Failed to add rating', error: error.message });
+    }
+});
 
 // Lắng nghe cổng 3000
 const PORT = 3000;

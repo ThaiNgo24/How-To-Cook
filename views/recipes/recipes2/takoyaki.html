@@ -3,39 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Cook - Zangi</title>
+    <title>How To Cook - Takoyaki</title> <!-- Thay thế [Dish Name] với tên món ăn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/howtocook.css">
     <link rel="icon" href="/public/icon/japan4.png" sizes="192x192" />
+    <!--font chữ thanh tìm kiếm-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/public/js/search.js" defer></script> 
 </head>
 <body>
-   
-    <div id="recipe-content"></div>
     <header>
-        <h1>Zingi</h1>
+        <h1>Takoyaki</h1> <!-- Thay thế [Dish Name] với tên món ăn -->
         <nav>
+            <!--Menu-->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="menu">
+                  <button class="menu-button"><ion-icon name="menu-outline"></ion-icon></button>
+                  <ul class="submenu">
+                      <li><a href="/views/pages/page1.html">Home</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/credits">Credits</a></li>
+                      <li><a href="/views/pages/profile.html">Profile</a></li>
+                      <li><a class="logout" id="login-logout-btn">Logout</a></li>
+                  </ul>
+              </li>
             </ul>
+        <script src="/public/js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </nav>
+        <!--Thanh tìm kiếm-->
+        <div class="search-box">
+            <form class="search-form">
+              <input id="search-input" class="search-input" type="text" name="q" placeholder="search...">
+              <button class="search-button" type="button" onclick="searchFood()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div style="position: relative;">
+                <div  id="search-results" class="search-result"></div>
+            </div>
+        </div> 
     </header>
     <main>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="/public/images/images2/Takoyaki.jpg" alt="Takoyaki" class="main-image"> <!-- Thay thế [Image Path] và [Dish Name] -->
+                </div>
+            <div class="about-section">
+                <h2>About the Dish</h2>
+                <p>
+                    <strong>Origin</strong>: Takoyaki originated in Osaka in the 1930s, quickly becoming a popular street food across Japan.<br>
+                    <strong>Flavor</strong>: The dough is crispy on the outside, soft on the inside, with a savory octopus filling, topped with takoyaki sauce, bonito flakes, and seaweed.<br>
+                    <strong>Cultural Significance</strong>: Takoyaki is a beloved snack, often enjoyed at festivals, showcasing Osaka's vibrant food culture.
+                </p>
+            </div>
+            </div>
+        </section>
+        
         <section id="recipe-details">
-            <h2>Ingredients</h2></a>
+            <h2>Ingredients</h2>
             <ul>
-                <li>200g bột trắng</li>
-                <li>...</li>
-            </ul>
+                <li><strong>SAUCE</strong>
+                  <ul>
+                    <li>1/2 tbsp Worcestershire sauce</li>
+                    <li>1/2 tbsp tsuyu sauce (or soy sauce with a bit of sugar)</li>
+                    <li>1/2 tbsp tomato ketchup</li>
+                    <li>1 tbsp honey</li>
+                  </ul>
+                </li>
+                <li><strong>BATTER</strong>
+                  <ul>
+                    <li>500 ml dashi stock cooled</li>
+                    <li>1 medium egg</li>
+                    <li>100 g cake flour</li>
+                    <li>1 tsp tsuyu sauce (or soy sauce)</li>
+                    <li>Sesame oil for cooking</li>
+                  </ul>
+                </li>
+                <li><strong>FILLINGS</strong>
+                  <ul>
+                    <li>120 g boiled octopus</li>
+                    <li>4 tbsp red pickled ginger (benishoga)</li>
+                    <li>50 g green onion chopped</li>
+                    <li>30 g tempura flakes (tenkasu)</li>
+                  </ul>
+                </li>
+                <li><strong>TOPPINGS (ADD ACCORDING TO PREFERENCE)</strong>
+                  <ul>
+                    <li>Japanese mayonnaise</li>
+                    <li>Dried green laver powder (aonori)</li>
+                    <li>Bonito flakes (katsuobushi)</li>
+                  </ul>
+                </li>
+              </ul>
 
             <h2>Instructions</h2>
-            <p>1. cách chế biến</p>
+            <ol>
+                <li>Mix all sauce ingredients and set aside.</li>
+                <li>Whisk dashi, egg, cake flour, and tsuyu sauce until smooth.</li>
+                <li>Heat a takoyaki pan with sesame oil. Pour batter into the molds, filling completely.</li> 
+                <li>Add octopus, ginger, green onion, and tempura flakes into each mold.</li> 
+                <li>Cook until the bottom is golden, then flip and cook evenly into a ball shape.</li>
+                <li>Top with sauce, mayonnaise, aonori, and bonito flakes.</li>
+            </ol>
+        </section>
+        <section id="recipe-details"><h2>Video Tutorial</h2></section>
+        
+        <section id="recipe-video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ciQ9gzK9IWM?si=3eeWNEaWTPR1Vtrd&amp;start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="rating-section" class="comment-form">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p id="rating-value">You rated: 0/5</p>
+            </div>
+            <script src="/public/js/ratestar.js"></script>
+        </section>
+        <section id="comments-section">
+            <h2>Comments</h2>
             
-            <h2>Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MxRcCfgrTkc?si=oTEhD78pWB7j0UFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- Phần bình luận của mọi người -->
+            <div id="comments-container">
+                <!-- Các bình luận sẽ được hiển thị ở đây -->
+            </div>
+            
+            <!-- Form để gửi bình luận -->
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Add a comment..." rows="4"></textarea>
+                <button type="comment-button" onclick="submitComment()">Submit</button>
+            </div>
+            <script src="/public/js/comments.js"></script>
         </section>
     </main>
 </body>
