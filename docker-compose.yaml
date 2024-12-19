@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .            # Build từ thư mục hiện tại
+      dockerfile: Dockerfile
+    ports:
+      - "8080:3000"         # Map cổng 8080 trên máy tới cổng 3000 trong container
+    volumes:
+      - ./public:/app/public         # Đồng bộ thư mục public
+      - ./views:/app/views            # Đồng bộ thư mục views
+      - ./models:/app/models          # Đồng bộ thư mục models
+      - ./routes:/app/routes          # Đồng bộ thư mục routes
+    environment:
+      MONGO_URI: mongodb://mongo:27017/howToCook  # Kết nối MongoDB
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:5
+    container_name: mongodb
+    ports:
+      - "27017:27017"       # Map cổng MongoDB
+    volumes:
+      - mongo-data:/data/db # Lưu dữ liệu MongoDB
+
+volumes:
+  mongo-data:
