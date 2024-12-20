@@ -56,11 +56,11 @@ app.get('/contact', (req, res) => {
 });
 
 app.get('/register', (req, res) => {
-    res.sendFile(__dirname + '/views/users/register.html');
+    res.sendFile(__dirname + '/views/Users/register.html');
 });
   
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/views/users/login.html');
+    res.sendFile(__dirname + '/views/Users/login.html');
 });
 
 app.use((err, req, res, next) => {
