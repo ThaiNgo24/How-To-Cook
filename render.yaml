@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: cooking-guide-web
+    env: docker
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: ""
+    plan: free
+    autoDeploy: true
