@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const stars = document.querySelectorAll('.stars span');
     const ratingValue = document.getElementById('rating-value');
     const userId = localStorage.getItem('userId');
+    const username = localStorage.getItem('username');
     const dishName = document.querySelector('h1').getAttribute('data-dish-name'); 
     const savedRating = localStorage.getItem(`${dishName}-rating`);
 

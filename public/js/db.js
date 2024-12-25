@@ -11,6 +11,7 @@ const ratingSchema = new mongoose.Schema({
   userId: { type: String, required: true },
   rating: { type: Number, required: true, min: 1, max: 5 },
   dishName: { type: String, required: true },  
+  username: { type: String, required: true }, 
   timestamp: { type: Date, default: Date.now }
 });
 
