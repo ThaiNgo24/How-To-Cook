@@ -179,11 +179,11 @@ section {
 }
 
 .card {
-    width: 100%; /* Đảm bảo .card vừa với container của nó */
-    height: auto; /* Tự động điều chỉnh theo tỉ lệ của ảnh */
+    width: 100%; 
+    height: auto; 
     border-radius: 15px;
     overflow: hidden;
-    border: none; /* Loại bỏ viền nếu không cần thiết */
+    border: none; 
     position: relative;
 }
 
@@ -192,8 +192,8 @@ section {
     height: auto;
     object-fit: cover;
     border-radius: 15px;
-    display: flex; /* Thêm flexbox */
-    align-items: center; /* Căn giữa theo chiều dọc */
+    display: flex;
+    align-items: center; 
     justify-content: center;
 }
 
@@ -240,7 +240,7 @@ section {
 
 .card-btn {
     color: #1f3d47;
-    background: #feec29;
+    background: #b22222;
     width: 100px; 
     padding: 5px 15px;
     border-radius: 5px;
@@ -254,6 +254,11 @@ section {
 
 .card-btn a{
     text-decoration: none;
+    color: #fff;
+}
+
+.card-btn:hover {
+    background: #a52a2a;
 }
 
 #section5 {

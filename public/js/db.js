@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
-
-mongoose.connect('mongodb+srv://Thaingo:Gz6etxdvVgf3cs3S@cluster0.j83xa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+const uri = "mongodb+srv://Thaingo:Thai24062005@cluster0.j83xa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+mongoose.connect('mongodb+srv://Thaingo:Thai24062005@cluster0.j83xa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log('Connected to MongoDB')).catch(err => console.error(err));

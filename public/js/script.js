@@ -27,7 +27,7 @@ logoImage.onload = function () {
     ctx.fillRect(0, waterHeight, canvas.width, canvas.height - waterHeight);
     ctx.restore();
 
-    waterHeight -= 0.75;
+    waterHeight -= 0.1;
     if (waterHeight < 0) waterHeight = 0;
 
     // Bắt đầu làm rõ nền khi nước đạt khoảng 10% của chiều cao

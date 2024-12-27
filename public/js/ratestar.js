@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const stars = document.querySelectorAll('.stars span');
     const ratingValue = document.getElementById('rating-value');
-    const userId = localStorage.getItem('userId');
-    const username = localStorage.getItem('username');
+    const userId = localStorage.getItem('userId'); // Lấy userId từ localStorage
+    const username = localStorage.getItem('username'); // Lấy username từ localStorage
     const dishName = document.querySelector('h1').getAttribute('data-dish-name'); 
-    const savedRating = localStorage.getItem(`${dishName}-rating`);
+    const savedRating = localStorage.getItem(`${userId}-${dishName}-rating`); // Lưu đánh giá của người dùng theo userId và dishName
 
     if (savedRating) {
         setRatingDisplay(savedRating);
@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            const currentRating = parseInt(localStorage.getItem(`${dishName}-rating`) || 0);
+            const currentRating = parseInt(localStorage.getItem(`${userId}-${dishName}-rating`) || 0);
             const rating = index + 1;
 
             if (currentRating === rating) {
                 saveRating(0); 
                 setRatingDisplay(0); 
-                deleteRating(); 
+                deleteRating(userId, dishName); 
                 return;
             }
 
@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function resetStarColors() {
-        const currentRating = localStorage.getItem(`${dishName}-rating`) || 0;
+        const currentRating = localStorage.getItem(`${userId}-${dishName}-rating`) || 0;
         stars.forEach((s, i) => {
             s.style.color = i < currentRating ? '#ffc107' : '#ccc';
         });
     }
 
     function saveRating(rating) {
-        localStorage.setItem(`${dishName}-rating`, rating);
+        localStorage.setItem(`${userId}-${dishName}-rating`, rating); // Lưu đánh giá theo userId
     }
 
     function setRatingDisplay(rating) {
@@ -75,15 +75,15 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             body: JSON.stringify({ userId: userId, dishName: dishName, rating: rating })
         })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Rating submitted:', data);
-                japaneseAlert('Thank you for rating!');
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                japaneseAlert('Failed to submit rating.');
-            });
+        .then(response => response.json())
+        .then(data => {
+            console.log('Rating submitted:', data);
+            japaneseAlert('Thank you for rating!');
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            japaneseAlert('Failed to submit rating.');
+        });
     }
 
     function deleteRating(userId, dishName) {
@@ -96,16 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => console.log(data.message))
         .catch(error => console.error('Error:', error));
     }
-    function addRating(userId, dishName, rating) {
-        fetch('/add-rating', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userId, dishName, rating }),
-        })
-        .then(response => response.json())
-        .then(data => japaneseAlert(data.message))
-        .catch(error => console.error('Error:', error));
-    }
+
     function japaneseAlert(message) {
         if (document.getElementById('japanese-alert')) return;
 
@@ -155,5 +146,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-

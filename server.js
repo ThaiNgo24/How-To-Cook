@@ -19,8 +19,8 @@ app.use(express.json());  // Để parse các dữ liệu dạng JSON
 app.use(express.urlencoded({ extended: true })); // Để parse các dữ liệu form
 
 app.use(cors());  // Cho phép tất cả các nguồn (hoặc cấu hình theo yêu cầu)
-
-mongoose.connect('mongodb+srv://Thaingo:Gz6etxdvVgf3cs3S@cluster0.j83xa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+const uri = "mongodb+srv://Thaingo:Thai24062005@cluster0.j83xa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+mongoose.connect('mongodb+srv://Thaingo:Thai24062005@cluster0.j83xa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log('Connected to MongoDB')).catch(err => console.error(err));
@@ -126,27 +126,23 @@ const authenticateToken = (req, res, next) => {
 // Route gửi đánh giá, chỉ cho phép người dùng đánh giá một lần
 app.post('/submit-rating', async (req, res) => {
     const { rating, userId, dishName } = req.body;
-    console.log(req.body);  // In ra dữ liệu nhận được từ client
 
     try {
-        // Kiểm tra xem người dùng đã đánh giá chưa
         const existingRating = await Rating.findOne({ userId, dishName });
         if (existingRating) {
-            return res.status(400).json({ message: 'You have already rated' });
+            return res.status(400).json({ message: 'You have already rated this dish' });
         }
 
-        // Tạo đối tượng rating mới và lưu vào MongoDB
         const newRating = new Rating({
             rating: rating,
-            userId: userId,  // Lưu ID người dùng
-            dishName: dishName,  // Lưu tên món ăn
+            userId: userId,
+            dishName: dishName,
             timestamp: new Date()
         });
 
-        await newRating.save(); // Lưu rating vào MongoDB
+        await newRating.save();
         res.status(200).json({ message: 'Rating submitted successfully' });
     } catch (error) {
-        console.error('Error submitting rating:', error);
         res.status(500).json({ message: 'Failed to submit rating', error: error.message });
     }
 });
